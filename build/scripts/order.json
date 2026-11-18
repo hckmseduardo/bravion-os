@@ -525,6 +525,11 @@
     "archive": "dbus-1.16.2.tar.xz"
   },
   {
+    "page": "chapter08/libpipeline.html",
+    "script": "chapter08-libpipeline.sh",
+    "archive": "libpipeline-1.5.8.tar.gz"
+  },
+  {
     "page": "chapter08/man-db.html",
     "script": "chapter08-man-db.sh",
     "archive": "man-db-2.13.1.tar.xz"

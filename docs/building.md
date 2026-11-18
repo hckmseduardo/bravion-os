@@ -6,7 +6,7 @@ The build entry point is `./bravion build`. Do not run individual package recipe
 
 - Docker with privileged Linux containers and support for the target architecture.
 - Python 3 on the host to run the CLI.
-- A dedicated writable storage directory with at least 80 GiB free space. An SSD is recommended. Do not disconnect an external build disk while a build runs.
+- A dedicated writable storage directory outside the checkout, with at least 80 GiB free space. An SSD is recommended. Do not disconnect an external build disk while a build runs.
 - Preferably 8–16 GiB RAM available to Docker. Start with `--jobs 1` on smaller machines.
 - Internet access to upstream archives, Git repositories, and Rust dependencies.
 
@@ -54,7 +54,7 @@ No intermediate hand-built root filesystem, personal VM, or manually installed d
 
 The CLI streams stage changes. Detailed package logs live inside `build.ext4`; the target state is mirrored to `<storage>/status/status.json`. Final images, checksums, validation JSON, and boot logs are placed in `<storage>/outputs`.
 
-Repeat the same build command after a failure. Successful stages have checkpoints. An architecture change or a source change affecting a stage already started requires a new storage directory. Corrections limited to future, unstarted stages can resume automatically: stage input fingerprints verify that all previous inputs are identical, and the transition is recorded. Do not edit state files to bypass these checks.
+Repeat the same build command after a failure. Successful stages have checkpoints. An architecture change or a source change affecting a stage already started requires a new storage directory. Corrections limited to future, unstarted stages can resume automatically: stage input fingerprints verify that all previous inputs are identical, and the transition is recorded. Within an incomplete LFS stage, a pending package can also be added or corrected only when the completed ordered prefix, every started recipe, and the builder/executor inputs remain unchanged. Completed LFS stages cannot be reopened this way. Do not edit state files to bypass these checks.
 
 Compilation is a long-running task; an ARM Mac emulating AMD64 can take substantially longer. There is no promise that a full desktop build fits a free hosted CI runner's disk, RAM, or job duration.
 

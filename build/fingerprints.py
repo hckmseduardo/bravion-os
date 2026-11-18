@@ -4,7 +4,7 @@ Completed and partially executed stages remain immutable. The controller can
 accept a correction to a future stage without discarding an identical LFS base.
 """
 from pathlib import Path
-import ast,hashlib,stat,json
+import ast,hashlib,stat,json,re
 FILES={
  'sources':['build/fetch-sources.sh','research'],
  'lfs':['build/bootstrap.sh'],
@@ -36,7 +36,7 @@ def expanded(repo,paths):
   p=repo/name
   result.extend(sorted(p.rglob('*')) if p.is_dir() and not p.is_symlink() else [p])
  return [p for p in result if (not p.is_dir() or p.is_symlink()) and '__pycache__' not in p.parts and 'target' not in p.relative_to(repo).parts]
-def stage_fingerprints(repo,target):
+def stage_fingerprints(repo,target,include_lfs_packages=True):
  repo=Path(repo);tree=ast.parse((repo/'build/stages.py').read_text())
  functions={n.name:n for n in tree.body if isinstance(n,(ast.FunctionDef,ast.AsyncFunctionDef))}
  common='\n'.join(ast_text(n) for n in tree.body if isinstance(n,(ast.Import,ast.ImportFrom,ast.Assign,ast.AnnAssign)))
@@ -58,7 +58,7 @@ def stage_fingerprints(repo,target):
    pending+=sorted({n.id for n in ast.walk(node) if isinstance(n,ast.Name) and n.id in functions}-seen)
   h.update(ast_text(functions['main']).encode())
   paths=list(files)
-  if stage=='lfs':paths.append('experimental/amd64/scripts' if target=='amd64' else 'build/scripts')
+  if stage=='lfs' and include_lfs_packages:paths.append('experimental/amd64/scripts' if target=='amd64' else 'build/scripts')
   for p in sorted(set(expanded(repo,paths)+shared)):
    if '__pycache__' in p.parts or 'target' in p.relative_to(repo).parts:continue
    if p.is_dir() and not p.is_symlink():continue
@@ -68,3 +68,18 @@ def stage_fingerprints(repo,target):
    else:h.update(b'MISSING')
   results[stage]=h.hexdigest()
  return results
+
+def lfs_inputs(repo,target):
+ repo=Path(repo)
+ directory=repo/('experimental/amd64/scripts' if target=='amd64' else 'build/scripts')
+ packages=[]
+ for item in json.loads((directory/'order.json').read_text()):
+  if not item['page'].startswith(('chapter05/','chapter06/','chapter07/','chapter08/')):continue
+  name=item['script']
+  if not re.fullmatch(r'[A-Za-z0-9_+-]+\.sh',name):raise ValueError('Invalid LFS script name')
+  path=directory/name
+  h=hashlib.sha256(json.dumps(item,sort_keys=True).encode())
+  h.update(str(stat.S_IMODE(path.stat().st_mode)).encode());h.update(path.read_bytes())
+  packages.append({'script':name,'phase':'bootstrap' if item['page'].startswith(('chapter05/','chapter06/')) else 'chroot','fingerprint':h.hexdigest()})
+ if len({p['script'] for p in packages})!=len(packages):raise ValueError('Duplicate LFS package script')
+ return {'control':stage_fingerprints(repo,target,include_lfs_packages=False)['lfs'],'packages':packages}

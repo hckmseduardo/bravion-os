@@ -39,3 +39,13 @@ class FingerprintTests(unittest.TestCase):
    old=m.stage_fingerprints(p,'amd64')
    (p/'build/new-compiler-input').write_text('new')
    self.assertNotEqual(old['lfs'],m.stage_fingerprints(p,'amd64')['lfs'])
+ def test_individual_lfs_recipe_changes_preserve_controller_fingerprint(self):
+  with tempfile.TemporaryDirectory() as d:
+   p=pathlib.Path(d)/'repo';shutil.copytree(R,p,ignore=shutil.ignore_patterns('.git','target','__pycache__','logs'))
+   old=m.lfs_inputs(p,'pi4-arm64')
+   f=p/'build/scripts/chapter08-libpipeline.sh';f.write_text(f.read_text()+'\nprintf dependency\n')
+   new=m.lfs_inputs(p,'pi4-arm64')
+   self.assertEqual(old['control'],new['control'])
+   before={x['script']:x['fingerprint'] for x in old['packages']};after={x['script']:x['fingerprint'] for x in new['packages']}
+   self.assertNotEqual(before['chapter08-libpipeline.sh'],after['chapter08-libpipeline.sh'])
+   self.assertEqual(before['chapter08-gcc.sh'],after['chapter08-gcc.sh'])

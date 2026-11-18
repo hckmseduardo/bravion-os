@@ -116,7 +116,7 @@ The command creates the isolated builder, downloads and verifies sources, builds
 ./bravion status --storage /path/to/build-pi4
 ```
 
-Re-run the same build command to resume completed stages. A storage directory belongs to one target. Corrections limited to stages that have never started can resume automatically; changes affecting a started or completed stage require a new directory. Start with `--jobs 1` on memory-constrained machines. Allow **at least 80 GiB free disk space** and preferably 8–16 GiB of builder RAM. Emulated builds can take substantially longer than native builds.
+Re-run the same build command to resume completed stages. A storage directory belongs to one target. Corrections limited to stages that have never started can resume automatically. An incomplete LFS stage also validates individual package checkpoints; compiled or started recipes remain protected. Changes to verified prior inputs require a new directory. Start with `--jobs 1` on memory-constrained machines. Allow **at least 80 GiB free disk space** and preferably 8–16 GiB of builder RAM. Emulated builds can take substantially longer than native builds.
 
 Docker must support privileged Linux containers and the requested architecture. Parallels builds obtain the official ARM64 Tools ISO from the local Mac installation, or from `--tools-iso /path/to/prl-tools-lin-arm.iso`; this proprietary input is not in the repository. Flashing/importing and first-boot account setup happen after generation.
 
