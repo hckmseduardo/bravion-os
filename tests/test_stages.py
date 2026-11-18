@@ -33,3 +33,20 @@ class PcGraphicsTests(unittest.TestCase):
   for flag in ['-Dintel=enabled','-Dradeon=enabled','-Damdgpu=enabled']:
    self.assertIn(flag,recipe)
   self.assertEqual(m.desktop_recipe('pi4-arm64',source),source)
+
+class LfsIdentityTests(unittest.TestCase):
+ def test_finalization_adds_release_metadata_to_verified_lfs_root(self):
+  import tempfile
+  with tempfile.TemporaryDirectory() as d:
+   base=pathlib.Path(d)/'base';root=pathlib.Path(d)/'desktop'
+   (base/'build-done').mkdir(parents=True);(root/'etc').mkdir(parents=True)
+   (base/'build-done/chapter08-e2fsprogs.sh').touch()
+   with patch.object(m,'BASE',base),patch.object(m,'ROOT',root):m.finalize_lfs_identity()
+   self.assertEqual((root/'etc/lfs-release').read_text().strip(),'13.0')
+ def test_release_marker_requires_completed_base(self):
+  import tempfile
+  with tempfile.TemporaryDirectory() as d:
+   root=pathlib.Path(d);(root/'etc').mkdir()
+   with patch.object(m,'BASE',root/'missing'),patch.object(m,'ROOT',root):
+    with self.assertRaises(ValueError):m.finalize_lfs_identity()
+   self.assertFalse((root/'etc/lfs-release').exists())

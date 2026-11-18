@@ -188,7 +188,15 @@ def desktop_packages(target):
  p=ROOT/'desktop-scripts/pam-stack-native.sh';shutil.copy2(REPO/'desktop/generated/pam-stack-native.sh',p)
  guest(ROOT,'bash','/desktop-scripts/pam-stack-native.sh')
  run('bash',REPO/'desktop/wpa-dbus.sh')
+def finalize_lfs_identity():
+ # The package chapters finish before the LFS book's final identity files.
+ # Verify the base completion checkpoint before identifying this desktop root.
+ if not (BASE/'build-done/chapter08-e2fsprogs.sh').is_file():raise ValueError('LFS base is not complete')
+ marker=ROOT/'etc/lfs-release'
+ if marker.exists() and marker.read_text().strip()!='13.0':raise ValueError('Unexpected LFS base release')
+ marker.write_text('13.0\n')
 def cosmic(target):
+ finalize_lfs_identity()
  src=ROOT/'sources/cosmic-epoch'
  if not (src/'.git').exists():run('git','clone','--no-checkout','https://github.com/pop-os/cosmic-epoch.git',src)
  run('git','-C',src,'checkout','--detach',COSMIC_COMMIT)
