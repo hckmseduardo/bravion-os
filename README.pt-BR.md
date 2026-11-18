@@ -14,14 +14,15 @@
 
 ![Wallpaper original do Bravion](branding/bravion-wallpaper.png)
 
-O Bravion reúne terminal, editor, navegador e ferramentas de IA em um ambiente voltado ao desenvolvimento, à automação e à robótica. A base Linux e o desktop são construídos a partir das fontes; alguns componentes, como Rust, Node.js e Brave, usam distribuições binárias oficiais verificadas. O projeto ainda é experimental: não inclui ROS nem garantias de tempo real.
+O Bravion reúne terminal, editor, navegador e ferramentas de IA em um ambiente voltado ao desenvolvimento, à automação e à robótica. A base Linux e o desktop são construídos a partir das fontes; Rust e Node.js usam distribuições binárias oficiais verificadas; o próximo build instala o Brave pelo Flathub, com metadados assinados. O projeto ainda é experimental: não inclui ROS nem garantias de tempo real.
 
 ## O que vem na imagem
 
 - Desktop **COSMIC com Wayland**, Workspaces, terminal, arquivos e COSMIC Edit.
 - **Bravion Store em Rust**, com cartões de aplicativos, filtros, instalação, progresso, abertura e mensagens de erro.
 - **Git, Rust, Node.js e npm** para desenvolvimento.
-- **Brave** e suporte a **Flatpak**.
+- **Brave pré-instalado como Flatpak**, incluindo o runtime, nos próximos builds.
+- **Flathub e o repositório oficial do COSMIC** configurados para a COSMIC Store.
 - **PipeWire e WirePlumber** para áudio e microfone.
 - **NetworkManager** para Ethernet e Wi-Fi, mais **OpenSSH**.
 - Assistente inicial para criar sua conta e configurar a rede, sem senha padrão.
@@ -86,3 +87,11 @@ O Bravion corrige o mapeamento absoluto do dispositivo **Parallels Virtual Mouse
 Ajude com builds limpos, instalações novas, suporte de hardware, áudio, Wi-Fi e testes AMD64. Consulte [CONTRIBUTING.md](CONTRIBUTING.md) e informe sempre o que foi realmente testado.
 
 O trabalho original do Bravion usa [MIT](LICENSE), com exceções e componentes de terceiros descritos em [THIRD_PARTY.md](THIRD_PARTY.md). As modificações derivadas do COSMIC preservam GPL-3.0-only; kernel, firmware e aplicativos mantêm suas próprias condições. A arte Bravion é original e não contém personagens de franquias.
+
+### Navegador e fontes de aplicativos
+
+A geração instala o Brave para todos os usuários antes de empacotar a imagem; o primeiro login não precisa baixar o navegador. A versão 0.11.1 já gerada ainda contém o navegador nativo. Os novos builds usam Flatpak e mantêm o lançador Wayland com o ajuste de renderização para a VM.
+
+Os descritores assinados do Flathub e do COSMIC acompanham o código. As fontes do usuário são inicializadas na sessão gráfica para permitir a descoberta de applets do COSMIC. Os aplicativos oferecidos pelos repositórios dependem da arquitetura e da disponibilidade de cada mantenedor.
+
+O Brave e seu runtime seguem as versões disponíveis no Flathub no momento da configuração. Os commits instalados ficam registrados em `/usr/share/bravion/flatpak-build.txt`; builds feitos em datas diferentes podem conter versões diferentes. A geração automática não implica reprodutibilidade byte a byte.

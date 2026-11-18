@@ -40,6 +40,8 @@ The project began on Raspberry Pi 4 and expanded to Apple Silicon virtual machin
 | NetworkManager | Ethernet and Wi-Fi configuration |
 | OpenSSH | Remote terminal access using SSH keys |
 
+The Brave Flatpak and preconfigured repositories apply to the next generated development images; the older 0.11.1 artifacts listed below contain the native browser.
+
 The store offers Codex, Claude Code, Grok Build, VS Code, and optional desktop clients. Availability and authentication depend on each publisher. **Installing a client does not include a subscription, API credit, or account.** The store selects ARM64 or AMD64 downloads according to the guest architecture; architecture selection has regression tests. Installation on the unfinished AMD64 image remains to be tested.
 
 ## Platform status
