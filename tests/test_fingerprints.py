@@ -49,3 +49,12 @@ class FingerprintTests(unittest.TestCase):
    before={x['script']:x['fingerprint'] for x in old['packages']};after={x['script']:x['fingerprint'] for x in new['packages']}
    self.assertNotEqual(before['chapter08-libpipeline.sh'],after['chapter08-libpipeline.sh'])
    self.assertEqual(before['chapter08-gcc.sh'],after['chapter08-gcc.sh'])
+ def test_mirror_only_update_preserves_archive_identity_but_hash_change_does_not(self):
+  import json
+  with tempfile.TemporaryDirectory() as d:
+   p=pathlib.Path(d)/'repo';shutil.copytree(R,p,ignore=shutil.ignore_patterns('.git','target','__pycache__','logs'))
+   old=m.stage_fingerprints(p,'pi4-arm64');f=p/'desktop/manifest.json';data=json.loads(f.read_text())
+   data['packages'][0]['url']='https://example.org/verified-mirror/archive.tar.gz';f.write_text(json.dumps(data))
+   new=m.stage_fingerprints(p,'pi4-arm64');self.assertEqual(old['desktop-packages'],new['desktop-packages'])
+   data['packages'][0]['sha256']='0'*64;f.write_text(json.dumps(data))
+   self.assertNotEqual(old['desktop-packages'],m.stage_fingerprints(p,'pi4-arm64')['desktop-packages'])

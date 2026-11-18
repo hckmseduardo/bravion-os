@@ -64,7 +64,16 @@ def stage_fingerprints(repo,target,include_lfs_packages=True):
    if p.is_dir() and not p.is_symlink():continue
    h.update(str(p.relative_to(repo)).encode())
    if p.is_symlink():h.update(b'LINK'+str(p.readlink()).encode())
-   elif p.is_file():h.update(str(stat.S_IMODE(p.stat().st_mode)).encode());h.update(p.read_bytes())
+   elif p.is_file():
+    h.update(str(stat.S_IMODE(p.stat().st_mode)).encode())
+    if p.relative_to(repo).as_posix()=='desktop/manifest.json':
+     # Fetch verifies the mandatory SHA256 before using these archives. URL
+     # changes affect transport only; archive names, hashes and recipes remain
+     # material inputs. This permits moving an unavailable verified mirror.
+     manifest=json.loads(p.read_text())
+     for package in manifest['packages']:package.pop('url',None)
+     h.update(json.dumps(manifest,sort_keys=True,separators=(',',':')).encode())
+    else:h.update(p.read_bytes())
    else:h.update(b'MISSING')
   results[stage]=h.hexdigest()
  return results

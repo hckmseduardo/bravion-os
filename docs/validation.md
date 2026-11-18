@@ -4,7 +4,7 @@ The automatic pipeline is under clean-build validation. This document separates 
 
 ## Checks executed on 2026-11-18
 
-- Repository checks: 41 Python tests, two Brave launcher tests, source/recipe syntax and manifest checks passed.
+- Repository checks: 42 Python tests, two Brave launcher tests, source/recipe syntax and manifest checks passed.
 - Rust Store: 16 tests passed inside the native ARM64 LFS environment.
 - COSMIC pointer helper: five Rust regression tests passed.
 - Builder Dockerfile: built successfully for ARM64.
@@ -36,6 +36,8 @@ The packaging test reused a prepared root. It does **not** prove the new source 
 12. The ARM LFS order omitted libpipeline, causing man-db configuration to fail. Its recipe and verified source already existed. Added it immediately before the failed man-db, preserving the completed prefix. Granular LFS input plans now reject changes to compiled/started recipes and builder controls, while allowing this pending dependency. Six resume tests and real recipe fingerprint tests passed; the resumed pipeline compiled libpipeline and man-db, then completed the LFS stage. Old-plan metadata was derived only from the verified original source snapshot.
 
 13. The completed package chapters do not create the final LFS release identity file. Added guarded finalization before COSMIC compilation; tests verify that it writes `13.0` only after the base completion checkpoint exists. The Parallels validation reuses an independent, filesystem-checked copy of the same verified ARM64 LFS/BLFS cache; target kernel/desktop checkpoints are discarded and rebuilt.
+
+14. A GNU redirect selected an unavailable mirror while fetching libunistring. The official GNU server and an independent mirror supplied byte-identical archives matching the pin. GNU redirect URLs now use the official server. Desktop fingerprints exclude only the transport URL; hashes, names, recipes, paths, order and modes remain checked. Mirror-only and hash-change regressions passed. Existing validation metadata was normalized only after the old evaluator matched its immutable source and the normalized old/new material inputs matched exactly.
 
 ## Still pending
 
