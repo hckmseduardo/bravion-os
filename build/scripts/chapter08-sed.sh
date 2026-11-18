@@ -1,0 +1,20 @@
+#!/bin/bash
+set -euo pipefail
+set -x
+cd /sources
+archive='sed-4.9.tar.xz'
+source_dir=$(tar -tf "$archive" | sed -n '1s@/.*@@p')
+rm -rf "$source_dir"
+tar -xf "$archive"
+cd "$source_dir"
+./configure --prefix=/usr
+
+make
+make html
+
+make install
+install -d -m755           /usr/share/doc/sed-4.9
+install -m644 doc/sed.html /usr/share/doc/sed-4.9
+
+cd /sources
+rm -rf "$source_dir"

@@ -1,0 +1,4 @@
+auth include system-auth
+account include system-account
+session required pam_env.so conffile=/etc/security/cosmic-env.conf readenv=0 user_readenv=0
+session include system-session

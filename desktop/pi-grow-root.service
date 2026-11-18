@@ -1,0 +1,15 @@
+[Unit]
+Description=Expand the Pi LFS root partition and filesystem
+After=local-fs.target systemd-udev-settle.service
+Before=pi-firstboot.service pi-desktop-firstboot.service display-manager.service
+ConditionPathExists=!/var/lib/pi-lfs/grow-root.done
+
+[Service]
+Type=oneshot
+ExecStart=-/usr/sbin/pi-grow-root
+TimeoutStartSec=5min
+StandardOutput=journal+console
+StandardError=journal+console
+
+[Install]
+WantedBy=multi-user.target

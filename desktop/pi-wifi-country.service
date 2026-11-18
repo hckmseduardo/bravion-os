@@ -1,0 +1,15 @@
+[Unit]
+Description=Restore the user-selected Wi-Fi regulatory country
+ConditionPathExists=/etc/default/pi-wifi-country
+After=systemd-udev-trigger.service
+Before=NetworkManager.service
+
+[Service]
+Type=oneshot
+EnvironmentFile=/etc/default/pi-wifi-country
+ExecStartPre=/usr/sbin/iw reg reload
+ExecStart=/usr/sbin/iw reg set ${WIFI_COUNTRY}
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

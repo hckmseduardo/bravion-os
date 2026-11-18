@@ -1,0 +1,552 @@
+[
+  {
+    "page": "chapter05/binutils-pass1.html",
+    "script": "chapter05-binutils-pass1.sh",
+    "archive": "binutils-2.46.0.tar.xz"
+  },
+  {
+    "page": "chapter05/gcc-pass1.html",
+    "script": "chapter05-gcc-pass1.sh",
+    "archive": "gcc-15.2.0.tar.xz"
+  },
+  {
+    "page": "chapter05/linux-headers.html",
+    "script": "chapter05-linux-headers.sh",
+    "archive": "linux-6.18.10.tar.xz"
+  },
+  {
+    "page": "chapter05/glibc.html",
+    "script": "chapter05-glibc.sh",
+    "archive": "glibc-2.43.tar.xz"
+  },
+  {
+    "page": "chapter05/gcc-libstdc++.html",
+    "script": "chapter05-gcc-libstdc++.sh",
+    "archive": "gcc-15.2.0.tar.xz"
+  },
+  {
+    "page": "chapter06/m4.html",
+    "script": "chapter06-m4.sh",
+    "archive": "m4-1.4.21.tar.xz"
+  },
+  {
+    "page": "chapter06/ncurses.html",
+    "script": "chapter06-ncurses.sh",
+    "archive": "ncurses-6.6.tar.gz"
+  },
+  {
+    "page": "chapter06/bash.html",
+    "script": "chapter06-bash.sh",
+    "archive": "bash-5.3.tar.gz"
+  },
+  {
+    "page": "chapter06/coreutils.html",
+    "script": "chapter06-coreutils.sh",
+    "archive": "coreutils-9.10.tar.xz"
+  },
+  {
+    "page": "chapter06/diffutils.html",
+    "script": "chapter06-diffutils.sh",
+    "archive": "diffutils-3.12.tar.xz"
+  },
+  {
+    "page": "chapter06/file.html",
+    "script": "chapter06-file.sh",
+    "archive": "file-5.46.tar.gz"
+  },
+  {
+    "page": "chapter06/findutils.html",
+    "script": "chapter06-findutils.sh",
+    "archive": "findutils-4.10.0.tar.xz"
+  },
+  {
+    "page": "chapter06/gawk.html",
+    "script": "chapter06-gawk.sh",
+    "archive": "gawk-5.3.2.tar.xz"
+  },
+  {
+    "page": "chapter06/grep.html",
+    "script": "chapter06-grep.sh",
+    "archive": "grep-3.12.tar.xz"
+  },
+  {
+    "page": "chapter06/gzip.html",
+    "script": "chapter06-gzip.sh",
+    "archive": "gzip-1.14.tar.xz"
+  },
+  {
+    "page": "chapter06/make.html",
+    "script": "chapter06-make.sh",
+    "archive": "make-4.4.1.tar.gz"
+  },
+  {
+    "page": "chapter06/patch.html",
+    "script": "chapter06-patch.sh",
+    "archive": "patch-2.8.tar.xz"
+  },
+  {
+    "page": "chapter06/sed.html",
+    "script": "chapter06-sed.sh",
+    "archive": "sed-4.9.tar.xz"
+  },
+  {
+    "page": "chapter06/tar.html",
+    "script": "chapter06-tar.sh",
+    "archive": "tar-1.35.tar.xz"
+  },
+  {
+    "page": "chapter06/xz.html",
+    "script": "chapter06-xz.sh",
+    "archive": "xz-5.8.2.tar.xz"
+  },
+  {
+    "page": "chapter06/binutils-pass2.html",
+    "script": "chapter06-binutils-pass2.sh",
+    "archive": "binutils-2.46.0.tar.xz"
+  },
+  {
+    "page": "chapter06/gcc-pass2.html",
+    "script": "chapter06-gcc-pass2.sh",
+    "archive": "gcc-15.2.0.tar.xz"
+  },
+  {
+    "page": "chapter07/creatingdirs.html",
+    "script": "chapter07-creatingdirs.sh",
+    "archive": null
+  },
+  {
+    "page": "chapter07/createfiles.html",
+    "script": "chapter07-createfiles.sh",
+    "archive": null
+  },
+  {
+    "page": "chapter07/gettext.html",
+    "script": "chapter07-gettext.sh",
+    "archive": "gettext-1.0.tar.xz"
+  },
+  {
+    "page": "chapter07/bison.html",
+    "script": "chapter07-bison.sh",
+    "archive": "bison-3.8.2.tar.xz"
+  },
+  {
+    "page": "chapter07/perl.html",
+    "script": "chapter07-perl.sh",
+    "archive": "perl-5.42.0.tar.xz"
+  },
+  {
+    "page": "chapter07/Python.html",
+    "script": "chapter07-Python.sh",
+    "archive": "Python-3.14.3.tar.xz"
+  },
+  {
+    "page": "chapter07/texinfo.html",
+    "script": "chapter07-texinfo.sh",
+    "archive": "texinfo-7.2.tar.xz"
+  },
+  {
+    "page": "chapter07/util-linux.html",
+    "script": "chapter07-util-linux.sh",
+    "archive": "util-linux-2.41.3.tar.xz"
+  },
+  {
+    "page": "chapter08/man-pages.html",
+    "script": "chapter08-man-pages.sh",
+    "archive": "man-pages-6.17.tar.xz"
+  },
+  {
+    "page": "chapter08/iana-etc.html",
+    "script": "chapter08-iana-etc.sh",
+    "archive": "iana-etc-20260202.tar.gz"
+  },
+  {
+    "page": "chapter08/glibc.html",
+    "script": "chapter08-glibc.sh",
+    "archive": "glibc-2.43.tar.xz"
+  },
+  {
+    "page": "chapter08/zlib.html",
+    "script": "chapter08-zlib.sh",
+    "archive": "zlib-1.3.2.tar.gz"
+  },
+  {
+    "page": "chapter08/bzip2.html",
+    "script": "chapter08-bzip2.sh",
+    "archive": "bzip2-1.0.8.tar.gz"
+  },
+  {
+    "page": "chapter08/xz.html",
+    "script": "chapter08-xz.sh",
+    "archive": "xz-5.8.2.tar.xz"
+  },
+  {
+    "page": "chapter08/lz4.html",
+    "script": "chapter08-lz4.sh",
+    "archive": "lz4-1.10.0.tar.gz"
+  },
+  {
+    "page": "chapter08/zstd.html",
+    "script": "chapter08-zstd.sh",
+    "archive": "zstd-1.5.7.tar.gz"
+  },
+  {
+    "page": "chapter08/file.html",
+    "script": "chapter08-file.sh",
+    "archive": "file-5.46.tar.gz"
+  },
+  {
+    "page": "chapter08/readline.html",
+    "script": "chapter08-readline.sh",
+    "archive": "readline-8.3.tar.gz"
+  },
+  {
+    "page": "chapter08/pcre2.html",
+    "script": "chapter08-pcre2.sh",
+    "archive": "pcre2-10.47.tar.bz2"
+  },
+  {
+    "page": "chapter08/m4.html",
+    "script": "chapter08-m4.sh",
+    "archive": "m4-1.4.21.tar.xz"
+  },
+  {
+    "page": "chapter08/bc.html",
+    "script": "chapter08-bc.sh",
+    "archive": "bc-7.0.3.tar.xz"
+  },
+  {
+    "page": "chapter08/flex.html",
+    "script": "chapter08-flex.sh",
+    "archive": "flex-2.6.4.tar.gz"
+  },
+  {
+    "page": "chapter08/tcl.html",
+    "script": "chapter08-tcl.sh",
+    "archive": "tcl8.6.17-src.tar.gz"
+  },
+  {
+    "page": "chapter08/expect.html",
+    "script": "chapter08-expect.sh",
+    "archive": "expect5.45.4.tar.gz"
+  },
+  {
+    "page": "chapter08/dejagnu.html",
+    "script": "chapter08-dejagnu.sh",
+    "archive": "dejagnu-1.6.3.tar.gz"
+  },
+  {
+    "page": "chapter08/pkgconf.html",
+    "script": "chapter08-pkgconf.sh",
+    "archive": "pkgconf-2.5.1.tar.xz"
+  },
+  {
+    "page": "chapter08/binutils.html",
+    "script": "chapter08-binutils.sh",
+    "archive": "binutils-2.46.0.tar.xz"
+  },
+  {
+    "page": "chapter08/gmp.html",
+    "script": "chapter08-gmp.sh",
+    "archive": "gmp-6.3.0.tar.xz"
+  },
+  {
+    "page": "chapter08/mpfr.html",
+    "script": "chapter08-mpfr.sh",
+    "archive": "mpfr-4.2.2.tar.xz"
+  },
+  {
+    "page": "chapter08/mpc.html",
+    "script": "chapter08-mpc.sh",
+    "archive": "mpc-1.3.1.tar.gz"
+  },
+  {
+    "page": "chapter08/attr.html",
+    "script": "chapter08-attr.sh",
+    "archive": "attr-2.5.2.tar.gz"
+  },
+  {
+    "page": "chapter08/acl.html",
+    "script": "chapter08-acl.sh",
+    "archive": "acl-2.3.2.tar.xz"
+  },
+  {
+    "page": "chapter08/libcap.html",
+    "script": "chapter08-libcap.sh",
+    "archive": "libcap-2.77.tar.xz"
+  },
+  {
+    "page": "chapter08/libxcrypt.html",
+    "script": "chapter08-libxcrypt.sh",
+    "archive": "libxcrypt-4.5.2.tar.xz"
+  },
+  {
+    "page": "chapter08/shadow.html",
+    "script": "chapter08-shadow.sh",
+    "archive": "shadow-4.19.3.tar.xz"
+  },
+  {
+    "page": "chapter08/gcc.html",
+    "script": "chapter08-gcc.sh",
+    "archive": "gcc-15.2.0.tar.xz"
+  },
+  {
+    "page": "chapter08/ncurses.html",
+    "script": "chapter08-ncurses.sh",
+    "archive": "ncurses-6.6.tar.gz"
+  },
+  {
+    "page": "chapter08/sed.html",
+    "script": "chapter08-sed.sh",
+    "archive": "sed-4.9.tar.xz"
+  },
+  {
+    "page": "chapter08/psmisc.html",
+    "script": "chapter08-psmisc.sh",
+    "archive": "psmisc-23.7.tar.xz"
+  },
+  {
+    "page": "chapter08/gettext.html",
+    "script": "chapter08-gettext.sh",
+    "archive": "gettext-1.0.tar.xz"
+  },
+  {
+    "page": "chapter08/bison.html",
+    "script": "chapter08-bison.sh",
+    "archive": "bison-3.8.2.tar.xz"
+  },
+  {
+    "page": "chapter08/grep.html",
+    "script": "chapter08-grep.sh",
+    "archive": "grep-3.12.tar.xz"
+  },
+  {
+    "page": "chapter08/bash.html",
+    "script": "chapter08-bash.sh",
+    "archive": "bash-5.3.tar.gz"
+  },
+  {
+    "page": "chapter08/libtool.html",
+    "script": "chapter08-libtool.sh",
+    "archive": "libtool-2.5.4.tar.xz"
+  },
+  {
+    "page": "chapter08/gdbm.html",
+    "script": "chapter08-gdbm.sh",
+    "archive": "gdbm-1.26.tar.gz"
+  },
+  {
+    "page": "chapter08/gperf.html",
+    "script": "chapter08-gperf.sh",
+    "archive": "gperf-3.3.tar.gz"
+  },
+  {
+    "page": "chapter08/expat.html",
+    "script": "chapter08-expat.sh",
+    "archive": "expat-2.7.4.tar.xz"
+  },
+  {
+    "page": "chapter08/inetutils.html",
+    "script": "chapter08-inetutils.sh",
+    "archive": "inetutils-2.7.tar.gz"
+  },
+  {
+    "page": "chapter08/less.html",
+    "script": "chapter08-less.sh",
+    "archive": "less-692.tar.gz"
+  },
+  {
+    "page": "chapter08/perl.html",
+    "script": "chapter08-perl.sh",
+    "archive": "perl-5.42.0.tar.xz"
+  },
+  {
+    "page": "chapter08/xml-parser.html",
+    "script": "chapter08-xml-parser.sh",
+    "archive": "XML-Parser-2.47.tar.gz"
+  },
+  {
+    "page": "chapter08/intltool.html",
+    "script": "chapter08-intltool.sh",
+    "archive": "intltool-0.51.0.tar.gz"
+  },
+  {
+    "page": "chapter08/autoconf.html",
+    "script": "chapter08-autoconf.sh",
+    "archive": "autoconf-2.72.tar.xz"
+  },
+  {
+    "page": "chapter08/automake.html",
+    "script": "chapter08-automake.sh",
+    "archive": "automake-1.18.1.tar.xz"
+  },
+  {
+    "page": "chapter08/openssl.html",
+    "script": "chapter08-openssl.sh",
+    "archive": "openssl-3.5.9.tar.gz"
+  },
+  {
+    "page": "chapter08/libelf.html",
+    "script": "chapter08-libelf.sh",
+    "archive": "elfutils-0.194.tar.bz2"
+  },
+  {
+    "page": "chapter08/libffi.html",
+    "script": "chapter08-libffi.sh",
+    "archive": "libffi-3.5.2.tar.gz"
+  },
+  {
+    "page": "chapter08/sqlite.html",
+    "script": "chapter08-sqlite.sh",
+    "archive": "sqlite-autoconf-3510200.tar.gz"
+  },
+  {
+    "page": "chapter08/Python.html",
+    "script": "chapter08-Python.sh",
+    "archive": "Python-3.14.3.tar.xz"
+  },
+  {
+    "page": "chapter08/flit-core.html",
+    "script": "chapter08-flit-core.sh",
+    "archive": "flit_core-3.12.0.tar.gz"
+  },
+  {
+    "page": "chapter08/packaging.html",
+    "script": "chapter08-packaging.sh",
+    "archive": "packaging-26.0.tar.gz"
+  },
+  {
+    "page": "chapter08/wheel.html",
+    "script": "chapter08-wheel.sh",
+    "archive": "wheel-0.46.3.tar.gz"
+  },
+  {
+    "page": "chapter08/setuptools.html",
+    "script": "chapter08-setuptools.sh",
+    "archive": "setuptools-82.0.0.tar.gz"
+  },
+  {
+    "page": "chapter08/ninja.html",
+    "script": "chapter08-ninja.sh",
+    "archive": "ninja-1.13.2.tar.gz"
+  },
+  {
+    "page": "chapter08/meson.html",
+    "script": "chapter08-meson.sh",
+    "archive": "meson-1.10.1.tar.gz"
+  },
+  {
+    "page": "chapter08/kmod.html",
+    "script": "chapter08-kmod.sh",
+    "archive": "kmod-34.2.tar.xz"
+  },
+  {
+    "page": "chapter08/coreutils.html",
+    "script": "chapter08-coreutils.sh",
+    "archive": "coreutils-9.10.tar.xz"
+  },
+  {
+    "page": "chapter08/diffutils.html",
+    "script": "chapter08-diffutils.sh",
+    "archive": "diffutils-3.12.tar.xz"
+  },
+  {
+    "page": "chapter08/gawk.html",
+    "script": "chapter08-gawk.sh",
+    "archive": "gawk-5.3.2.tar.xz"
+  },
+  {
+    "page": "chapter08/findutils.html",
+    "script": "chapter08-findutils.sh",
+    "archive": "findutils-4.10.0.tar.xz"
+  },
+  {
+    "page": "chapter08/groff.html",
+    "script": "chapter08-groff.sh",
+    "archive": "groff-1.23.0.tar.gz"
+  },
+  {
+    "page": "chapter08/gzip.html",
+    "script": "chapter08-gzip.sh",
+    "archive": "gzip-1.14.tar.xz"
+  },
+  {
+    "page": "chapter08/iproute2.html",
+    "script": "chapter08-iproute2.sh",
+    "archive": "iproute2-6.18.0.tar.xz"
+  },
+  {
+    "page": "chapter08/kbd.html",
+    "script": "chapter08-kbd.sh",
+    "archive": "kbd-2.9.0.tar.xz"
+  },
+  {
+    "page": "chapter08/libpipeline.html",
+    "script": "chapter08-libpipeline.sh",
+    "archive": "libpipeline-1.5.8.tar.gz"
+  },
+  {
+    "page": "chapter08/make.html",
+    "script": "chapter08-make.sh",
+    "archive": "make-4.4.1.tar.gz"
+  },
+  {
+    "page": "chapter08/patch.html",
+    "script": "chapter08-patch.sh",
+    "archive": "patch-2.8.tar.xz"
+  },
+  {
+    "page": "chapter08/tar.html",
+    "script": "chapter08-tar.sh",
+    "archive": "tar-1.35.tar.xz"
+  },
+  {
+    "page": "chapter08/texinfo.html",
+    "script": "chapter08-texinfo.sh",
+    "archive": "texinfo-7.2.tar.xz"
+  },
+  {
+    "page": "chapter08/vim.html",
+    "script": "chapter08-vim.sh",
+    "archive": "vim-9.2.0078.tar.gz"
+  },
+  {
+    "page": "chapter08/markupsafe.html",
+    "script": "chapter08-markupsafe.sh",
+    "archive": "markupsafe-3.0.3.tar.gz"
+  },
+  {
+    "page": "chapter08/jinja2.html",
+    "script": "chapter08-jinja2.sh",
+    "archive": "jinja2-3.1.6.tar.gz"
+  },
+  {
+    "page": "chapter08/systemd.html",
+    "script": "chapter08-systemd.sh",
+    "archive": "systemd-259.1.tar.gz"
+  },
+  {
+    "page": "chapter08/dbus.html",
+    "script": "chapter08-dbus.sh",
+    "archive": "dbus-1.16.2.tar.xz"
+  },
+  {
+    "page": "chapter08/man-db.html",
+    "script": "chapter08-man-db.sh",
+    "archive": "man-db-2.13.1.tar.xz"
+  },
+  {
+    "page": "chapter08/procps-ng.html",
+    "script": "chapter08-procps-ng.sh",
+    "archive": "procps-ng-4.0.6.tar.xz"
+  },
+  {
+    "page": "chapter08/util-linux.html",
+    "script": "chapter08-util-linux.sh",
+    "archive": "util-linux-2.41.3.tar.xz"
+  },
+  {
+    "page": "chapter08/e2fsprogs.html",
+    "script": "chapter08-e2fsprogs.sh",
+    "archive": "e2fsprogs-1.47.3.tar.gz"
+  }
+]

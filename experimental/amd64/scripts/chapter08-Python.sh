@@ -1,0 +1,37 @@
+#!/bin/bash
+set -euo pipefail
+umask 022
+set -x
+export MAKEFLAGS=-j4
+cd /sources
+archive='Python-3.14.3.tar.xz'
+source_dir=$(tar -tf "$archive" | sed -n '1s@/.*@@p')
+rm -rf "$source_dir"
+tar -xf "$archive"
+cd "$source_dir"
+./configure --prefix=/usr          \
+            --enable-shared        \
+            --with-system-expat    \
+            --without-static-libpython
+
+make
+
+make install
+
+cat > /etc/pip.conf << EOF
+[global]
+root-user-action = ignore
+disable-pip-version-check = true
+EOF
+
+
+install -v -dm755 /usr/share/doc/python-3.14.3/html
+
+tar --strip-components=1  \
+    --no-same-owner       \
+    --no-same-permissions \
+    -C /usr/share/doc/python-3.14.3/html \
+    -xvf ../python-3.14.3-docs-html.tar.bz2
+
+cd /sources
+rm -rf "$source_dir"

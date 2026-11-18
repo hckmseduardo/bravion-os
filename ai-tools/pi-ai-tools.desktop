@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Bravion Store
+Comment=Discover official AI desktop apps, terminal tools, and VS Code
+Exec=/usr/bin/pi-ai-tools
+Icon=/usr/share/pi-ai-tools/icons/bravion-store.png
+Terminal=false
+Categories=Development;Utility;
+Keywords=AI;Codex;Claude;Grok;VSCode;Software;Store;
+StartupNotify=true

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Bravion Store
+Comment=Choose optional apps on first graphical login
+Exec=/usr/bin/pi-ai-tools --autostart
+TryExec=/usr/bin/pi-ai-tools
+Icon=/usr/share/pi-ai-tools/icons/bravion-store.png
+Terminal=false
+OnlyShowIn=COSMIC;
+X-GNOME-Autostart-enabled=true

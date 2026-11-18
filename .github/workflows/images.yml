@@ -1,0 +1,47 @@
+name: Generate image
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: Image target
+        required: true
+        type: choice
+        options:
+          - pi4-arm64
+          - parallels-arm64
+          - amd64
+      storage_root:
+        description: Dedicated build storage parent on the worker
+        required: true
+        default: /var/lib/bravion-builds
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: image-${{ inputs.target }}
+  cancel-in-progress: false
+jobs:
+  image:
+    # Register trusted native workers with these project-specific labels.
+    # Untrusted pull requests never run on these workers.
+    runs-on: [self-hosted, '${{ inputs.target == ''amd64'' && ''bravion-amd64'' || ''bravion-arm64'' }}']
+    timeout-minutes: 4320
+    env:
+      BRAVION_TARGET: ${{ inputs.target }}
+      BRAVION_STORAGE_ROOT: ${{ inputs.storage_root }}
+      BRAVION_RUN_ID: ${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Validate source
+        run: ./bravion check
+      - name: Generate and verify image
+        shell: bash
+        run: |
+          set -euo pipefail
+          ./bravion build --target "$BRAVION_TARGET" \
+            --storage "$BRAVION_STORAGE_ROOT/$BRAVION_RUN_ID-$BRAVION_TARGET" --jobs 1
+      - name: Report output location
+        shell: bash
+        run: |
+          printf 'Verified image outputs: %s/%s-%s/outputs\n' \
+            "$BRAVION_STORAGE_ROOT" "$BRAVION_RUN_ID" "$BRAVION_TARGET" >> "$GITHUB_STEP_SUMMARY"

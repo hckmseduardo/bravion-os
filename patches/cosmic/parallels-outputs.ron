@@ -1,0 +1,52 @@
+(
+    config: {
+        [
+            (
+                connector: "Virtual-1",
+                make: "Unknown",
+                model: "Unknown",
+            ),
+            (
+                connector: "Virtual-2",
+                make: "Unknown",
+                model: "Unknown",
+            ),
+        ]: [
+            (
+                mode: ((1920, 1080), Some(60000)),
+                vrr: r#false,
+                scale: 1.0,
+                transform: Normal,
+                position: (0, 0),
+                enabled: r#true,
+                xwayland_primary: true,
+            ),
+            (
+                mode: ((1920, 1080), Some(60000)),
+                vrr: r#false,
+                scale: 1.0,
+                transform: Normal,
+                position: (1920, 0),
+                enabled: r#true,
+                xwayland_primary: false,
+            ),
+        ],
+        [
+            (
+                connector: "Virtual-1",
+                make: "Unknown",
+                model: "Unknown",
+            ),
+        ]: [
+            (
+                mode: ((1280, 800), Some(59810)),
+                vrr: r#false,
+                scale: 1.0,
+                transform: Normal,
+                position: (0, 0),
+                enabled: r#true,
+                xwayland_primary: true,
+            ),
+        ],
+    },
+)

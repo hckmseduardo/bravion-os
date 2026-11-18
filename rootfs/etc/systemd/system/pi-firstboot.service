@@ -1,0 +1,19 @@
+[Unit]
+Description=Pi LFS first-boot setup
+ConditionPathExists=!/var/lib/pi-lfs/setup-complete
+After=systemd-user-sessions.service systemd-networkd.service
+Before=getty@tty1.service
+[Service]
+Type=oneshot
+Environment=PATH=/usr/bin:/usr/sbin
+UMask=0022
+ExecStart=/usr/sbin/pi-setup
+StandardInput=tty-force
+StandardOutput=tty
+StandardError=tty
+TTYPath=/dev/tty1
+TTYReset=yes
+TTYVHangup=yes
+TimeoutStartSec=infinity
+[Install]
+WantedBy=multi-user.target

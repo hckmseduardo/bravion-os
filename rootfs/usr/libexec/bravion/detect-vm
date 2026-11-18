@@ -1,0 +1,5 @@
+#!/bin/sh
+if /usr/bin/systemd-detect-virt --vm --quiet; then
+    touch /etc/pi-lfs-vm
+fi
+exit 0

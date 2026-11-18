@@ -1,0 +1,56 @@
+[
+  {
+    "name": "MarkupSafe",
+    "version": "3.0.3",
+    "url": "https://files.pythonhosted.org/packages/7e/99/7690b6d4034fffd95959cbe0c02de8deb3098cc577c67bb6a24fe5d7caa7/markupsafe-3.0.3.tar.gz",
+    "sha256": "722695808f4b6457b320fdc131280796bdceb04ab50fe1795cd540799ebe1698"
+  },
+  {
+    "name": "Mako",
+    "version": "1.3.10",
+    "url": "https://files.pythonhosted.org/packages/9e/38/bd5b78a920a64d708fe6bc8e0a2c075e1389d53bef8413725c63ba041535/mako-1.3.10.tar.gz",
+    "sha256": "99579a6f39583fa7e5630a28c3c1f440e4e97a414b80372649c0ce338da2ea28"
+  },
+  {
+    "name": "Jinja2",
+    "version": "3.1.6",
+    "url": "https://files.pythonhosted.org/packages/df/bf/f7da0350254c0ed7c72f3e33cef02e048281fec7ecec5f032d4aac52226b/jinja2-3.1.6.tar.gz",
+    "sha256": "0137fb05990d35f1275a587e9aee6d56da821fc83491a0fb838183be43f66d6d"
+  },
+  {
+    "name": "docutils",
+    "version": "0.22.4",
+    "url": "https://files.pythonhosted.org/packages/ae/b6/03bb70946330e88ffec97aefd3ea75ba575cb2e762061e0e62a213befee8/docutils-0.22.4.tar.gz",
+    "sha256": "4db53b1fde9abecbb74d91230d32ab626d94f6badfc575d6db9194a49df29968"
+  },
+  {
+    "name": "PyYAML",
+    "version": "6.0.3",
+    "url": "https://files.pythonhosted.org/packages/05/8e/961c0007c59b8dd7729d542c61a4d537767a59645b82a0b521206e1e25c2/pyyaml-6.0.3.tar.gz",
+    "sha256": "d76623373421df22fb4cf8817020cbb7ef15c725b9d5e45f17e189bfc384190f"
+  },
+  {
+    "name": "pyelftools",
+    "version": "0.32",
+    "url": "https://files.pythonhosted.org/packages/b9/ab/33968940b2deb3d92f5b146bc6d4009a5f95d1d06c148ea2f9ee965071af/pyelftools-0.32.tar.gz",
+    "sha256": "6de90ee7b8263e740c8715a925382d4099b354f29ac48ea40d840cf7aa14ace5"
+  },
+  {
+    "name": "pyproject-metadata",
+    "version": "0.12.1",
+    "url": "https://files.pythonhosted.org/packages/4f/76/1cae539918a7b1746d624c2f01560b793c22cd8c081157505bb9bbf0e34d/pyproject_metadata-0.12.1.tar.gz",
+    "sha256": "8809a4df6fe08279b39a8890669506ed3158e0617855ac9aff098fcbe772ae4c"
+  },
+  {
+    "name": "meson-python",
+    "version": "0.19.0",
+    "url": "https://files.pythonhosted.org/packages/32/98/7fe5d1bf741c03c6eea04b6245737dbd79657d4f9200e82fcbb4cc12637b/meson_python-0.19.0.tar.gz",
+    "sha256": "9959d198aa69b57fcfd354a34518c6f795b781a73ed0656f4d01660160cc2553"
+  },
+  {
+    "name": "setuptools-scm",
+    "version": "9.2.2",
+    "url": "https://files.pythonhosted.org/packages/7b/b1/19587742aad604f1988a8a362e660e8c3ac03adccdb71c96d86526e5eb62/setuptools_scm-9.2.2.tar.gz",
+    "sha256": "1c674ab4665686a0887d7e24c03ab25f24201c213e82ea689d2f3e169ef7ef57"
+  }
+]

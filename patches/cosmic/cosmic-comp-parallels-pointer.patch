@@ -1,0 +1,31 @@
+diff --git a/src/input/mod.rs b/src/input/mod.rs
+index d51dd8a6..00181f9a 100644
+--- a/src/input/mod.rs
++++ b/src/input/mod.rs
+@@ -1,5 +1,7 @@
+ // SPDX-License-Identifier: GPL-3.0-only
+ 
++mod absolute_pointer;
++
+ use crate::{
+     backend::render::{
+         ElementFilter,
+@@ -789,6 +791,18 @@ impl State {
+                             .cloned()
+                             .unwrap_or_else(|| seat.active_output());
+                         (output, position)
++                    } else if event.device().name() == "Parallels Virtual Mouse" {
++                        let outputs: Vec<_> = self.common.shell.read().outputs().cloned().collect();
++                        let active = outputs.iter().position(|o| *o == seat.active_output()).unwrap_or(0);
++                        let geometry: Vec<_> = outputs.iter().map(|o| {
++                            let r = o.geometry();
++                            (r.loc.x, r.loc.y, r.size.w, r.size.h)
++                        }).collect();
++                        let normalized = (event.x_transformed(1), event.y_transformed(1));
++                        let Some((index, (x, y))) = absolute_pointer::map_absolute_pointer(
++                            "Parallels Virtual Mouse", normalized, &geometry, active,
++                        ) else { return; };
++                        (outputs[index].clone(), Point::from((x, y)))
+                     } else {
+                         let output = seat.active_output();
+                         let output_geometry = output.geometry();

@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+"""Bravion's public build entry point. Requires Docker; never flashes a drive."""
+from pathlib import Path
+import argparse,json,os,shlex,shutil,subprocess,sys
+ROOT=Path(__file__).resolve().parent
+PLATFORMS={'pi4-arm64':'linux/arm64','parallels-arm64':'linux/arm64','amd64':'linux/amd64'}
+def main():
+ p=argparse.ArgumentParser(description=__doc__);sub=p.add_subparsers(dest='action',required=True)
+ b=sub.add_parser('build');b.add_argument('--target',choices=PLATFORMS,required=True);b.add_argument('--storage',type=Path,required=True);b.add_argument('--jobs',type=int,default=1);b.add_argument('--tools-iso',type=Path);b.add_argument('--dry-run',action='store_true')
+ s=sub.add_parser('status');s.add_argument('--storage',type=Path,required=True)
+ sub.add_parser('check');a=p.parse_args()
+ if a.action=='check':return subprocess.call([sys.executable,str(ROOT/'scripts/check.py')])
+ if a.action=='status':
+  status=a.storage/'status/status.json'
+  print(status.read_text() if status.exists() else 'No build status recorded in this storage directory.');return 0
+ if a.jobs<1:p.error('--jobs must be positive')
+ storage=a.storage.expanduser().resolve()
+ if storage==Path('/') or storage==ROOT:p.error('Choose a dedicated build storage directory')
+ iso=a.tools_iso
+ if a.target=='parallels-arm64' and iso is None:
+  candidate=Path('/Applications/Parallels Desktop.app/Contents/Resources/Tools/prl-tools-lin-arm.iso')
+  if candidate.is_file():iso=candidate
+ if a.target=='parallels-arm64' and (iso is None or not iso.is_file()):p.error('Parallels target requires the official ARM64 Tools ISO: use --tools-iso, or build on a Mac with Parallels installed.')
+ image='bravion-builder-'+a.target
+ commands=[['docker','build','--platform',PLATFORMS[a.target],'-t',image,'-f',str(ROOT/'build/Dockerfile'),str(ROOT)]]
+ command=['docker','run','--rm','--privileged','--platform',PLATFORMS[a.target],'--name','bravion-'+a.target,'--mount',f'type=bind,src={storage},dst=/storage','--mount',f'type=bind,src={storage}/logs,dst=/workspace/logs','-e',f'BRAVION_JOBS={a.jobs}','-e','BRAVION_VERSION='+((ROOT/'VERSION').read_text().strip())]
+ if iso:command+=['--mount',f'type=bind,src={iso.resolve()},dst=/inputs/parallels-tools.iso,readonly']
+ command+=[image,'bash','/workspace/scripts/container-build.sh',a.target];commands.append(command)
+ if a.dry_run:
+  print('\n'.join(shlex.join(c) for c in commands));return 0
+ if shutil.which('docker') is None:p.error('Install Docker with support for the requested architecture first')
+ storage.mkdir(parents=True,exist_ok=True)
+ if not (storage/'build.ext4').exists() and shutil.disk_usage(storage).free<80*1024**3:p.error('At least 80 GiB free storage is required for a fresh build')
+ (storage/'logs').mkdir(exist_ok=True);(storage/'outputs').mkdir(exist_ok=True);(storage/'status').mkdir(exist_ok=True)
+ for command in commands:subprocess.run(command,check=True)
+ return 0
+if __name__=='__main__':
+ try:raise SystemExit(main())
+ except subprocess.CalledProcessError as e:raise SystemExit(e.returncode)

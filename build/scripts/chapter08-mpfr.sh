@@ -1,0 +1,22 @@
+#!/bin/bash
+set -euo pipefail
+set -x
+cd /sources
+archive='mpfr-4.2.2.tar.xz'
+source_dir=$(tar -tf "$archive" | sed -n '1s@/.*@@p')
+rm -rf "$source_dir"
+tar -xf "$archive"
+cd "$source_dir"
+./configure --prefix=/usr        \
+            --disable-static     \
+            --enable-thread-safe \
+            --docdir=/usr/share/doc/mpfr-4.2.2
+
+make
+make html
+
+make install
+make install-html
+
+cd /sources
+rm -rf "$source_dir"

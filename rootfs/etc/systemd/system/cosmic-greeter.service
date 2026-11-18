@@ -1,0 +1,23 @@
+[Unit]
+Description=COSMIC graphical login after console account setup
+Requires=pi-firstboot.service
+Wants=cosmic-greeter-daemon.service
+After=pi-firstboot.service systemd-user-sessions.service cosmic-greeter-daemon.service
+Conflicts=getty@tty1.service
+After=getty@tty1.service
+StartLimitIntervalSec=60
+StartLimitBurst=5
+[Service]
+Type=simple
+# Evaluated after dependencies; a failed/incomplete wizard must never expose login.
+ExecStartPre=/usr/bin/test -f /var/lib/pi-lfs/setup-complete
+ExecStart=/usr/bin/greetd --config /etc/greetd/cosmic-greeter.toml
+IgnoreSIGPIPE=no
+SendSIGHUP=yes
+TimeoutStopSec=30s
+KeyringMode=shared
+Restart=always
+RestartSec=3
+[Install]
+Alias=display-manager.service
+WantedBy=graphical.target

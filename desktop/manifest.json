@@ -1,0 +1,1165 @@
+{
+  "schema": 1,
+  "packages": [
+    {
+      "name": "libpng",
+      "url": "https://downloads.sourceforge.net/libpng/libpng-1.6.55.tar.xz",
+      "archive": "libpng-1.6.55.tar.xz",
+      "sha256": "d925722864837ad5ae2a82070d4b2e0603dc72af44bd457c3962298258b8e82d",
+      "folder": "libpng-1.6.55",
+      "script": "generated/libpng.sh"
+    },
+    {
+      "name": "libxml2",
+      "url": "https://download.gnome.org/sources/libxml2/2.15/libxml2-2.15.1.tar.xz",
+      "archive": "libxml2-2.15.1.tar.xz",
+      "sha256": "c008bac08fd5c7b4a87f7b8a71f283fa581d80d80ff8d2efd3b26224c39bc54c",
+      "folder": "libxml2-2.15.1",
+      "script": "generated/libxml2.sh"
+    },
+    {
+      "name": "glib2",
+      "url": "https://download.gnome.org/sources/glib/2.86/glib-2.86.4.tar.xz",
+      "archive": "glib-2.86.4.tar.xz",
+      "sha256": "d4e2b5d791d5015ffd8c6971ad8e975a0a55c1a14926cdb25cf843ff00682260",
+      "folder": "glib-2.86.4",
+      "script": "generated/glib2.sh"
+    },
+    {
+      "name": "gobject-introspection",
+      "url": "https://download.gnome.org/sources/gobject-introspection/1.86/gobject-introspection-1.86.0.tar.xz",
+      "archive": "gobject-introspection-1.86.0.tar.xz",
+      "sha256": "920d1a3fcedeadc32acff95c2e203b319039dd4b4a08dd1a2dfd283d19c0b9ae",
+      "folder": "gobject-introspection-1.86.0",
+      "script": "generated/gobject-introspection.sh"
+    },
+    {
+      "name": "glib-introspection",
+      "url": "https://download.gnome.org/sources/glib/2.86/glib-2.86.4.tar.xz",
+      "archive": "glib-2.86.4.tar.xz",
+      "sha256": "d4e2b5d791d5015ffd8c6971ad8e975a0a55c1a14926cdb25cf843ff00682260",
+      "folder": "glib-2.86.4",
+      "script": "generated/glib-introspection.sh"
+    },
+    {
+      "name": "wayland",
+      "url": "https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.24.0/downloads/wayland-1.24.0.tar.xz",
+      "archive": "wayland-1.24.0.tar.xz",
+      "sha256": "82892487a01ad67b334eca83b54317a7c86a03a89cfadacfef5211f11a5d0536",
+      "folder": "wayland-1.24.0",
+      "script": "generated/wayland.sh"
+    },
+    {
+      "name": "wayland-protocols",
+      "url": "https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/1.47/downloads/wayland-protocols-1.47.tar.xz",
+      "archive": "wayland-protocols-1.47.tar.xz",
+      "sha256": "5fd4349bcbc9bab9a46f8cf77d1f434296a7a052c87440a094f63fcf62a58e20",
+      "folder": "wayland-protocols-1.47",
+      "script": "generated/wayland-protocols.sh"
+    },
+    {
+      "name": "libdrm",
+      "url": "https://dri.freedesktop.org/libdrm/libdrm-2.4.131.tar.xz",
+      "archive": "libdrm-2.4.131.tar.xz",
+      "sha256": "45ba9983b51c896406a3d654de81d313b953b76e6391e2797073d543c5f617d5",
+      "folder": "libdrm-2.4.131",
+      "script": "generated/libdrm.sh"
+    },
+    {
+      "name": "pixman",
+      "url": "https://www.cairographics.org/releases/pixman-0.46.4.tar.gz",
+      "archive": "pixman-0.46.4.tar.gz",
+      "sha256": "d09c44ebc3bd5bee7021c79f922fe8fb2fb57f7320f55e97ff9914d2346a591c",
+      "folder": "pixman-0.46.4",
+      "script": "generated/pixman.sh"
+    },
+    {
+      "name": "xorgproto",
+      "url": "https://xorg.freedesktop.org/archive/individual/proto/xorgproto-2025.1.tar.xz",
+      "archive": "xorgproto-2025.1.tar.xz",
+      "sha256": "56898c716c0578df8a2d828c9c3e5c528277705c0484381a81960fe1a67668e8",
+      "folder": "xorgproto-2025.1",
+      "script": "generated/xorgproto.sh"
+    },
+    {
+      "name": "xkeyboard-config",
+      "url": "https://www.x.org/pub/individual/data/xkeyboard-config/xkeyboard-config-2.46.tar.xz",
+      "archive": "xkeyboard-config-2.46.tar.xz",
+      "sha256": "10c58218fb60d08fb1f7b30304deb3ba47613195aa8a08a81f1972775ccc3640",
+      "folder": "xkeyboard-config-2.46",
+      "script": "generated/xkeyboard-config.sh"
+    },
+    {
+      "name": "dbus",
+      "url": "https://dbus.freedesktop.org/releases/dbus/dbus-1.16.2.tar.xz",
+      "archive": "dbus-1.16.2.tar.xz",
+      "sha256": "0ba2a1a4b16afe7bceb2c07e9ce99a8c2c3508e5dec290dbb643384bd6beb7e2",
+      "folder": "dbus-1.16.2",
+      "script": "generated/dbus.sh"
+    },
+    {
+      "name": "libxkbcommon",
+      "url": "https://github.com/lfs-book/libxkbcommon/archive/v1.13.1/libxkbcommon-1.13.1.tar.gz",
+      "archive": "libxkbcommon-1.13.1.tar.gz",
+      "sha256": "04e3bf1ab0858a26218576d956d83ebb3ec9c583402b8807b454250be10775b1",
+      "folder": "libxkbcommon-1.13.1",
+      "script": "generated/libxkbcommon.sh"
+    },
+    {
+      "name": "dbus-glib",
+      "url": "https://dbus.freedesktop.org/releases/dbus-glib/dbus-glib-0.114.tar.gz",
+      "archive": "dbus-glib-0.114.tar.gz",
+      "sha256": "c09c5c085b2a0e391b8ee7d783a1d63fe444e96717cc1814d61b5e8fc2827a7c",
+      "folder": "dbus-glib-0.114",
+      "script": "generated/dbus-glib.sh"
+    },
+    {
+      "name": "json-glib",
+      "url": "https://download.gnome.org/sources/json-glib/1.10/json-glib-1.10.8.tar.xz",
+      "archive": "json-glib-1.10.8.tar.xz",
+      "sha256": "55c5c141a564245b8f8fbe7698663c87a45a7333c2a2c56f06f811ab73b212dd",
+      "folder": "json-glib-1.10.8",
+      "script": "generated/json-glib.sh"
+    },
+    {
+      "name": "duktape",
+      "url": "https://duktape.org/duktape-2.7.0.tar.xz",
+      "archive": "duktape-2.7.0.tar.xz",
+      "sha256": "90f8d2fa8b5567c6899830ddef2c03f3c27960b11aca222fa17aa7ac613c2890",
+      "folder": "duktape-2.7.0",
+      "script": "generated/duktape.sh"
+    },
+    {
+      "name": "hwdata",
+      "url": "https://github.com/vcrhonek/hwdata/archive/v0.404/hwdata-0.404.tar.gz",
+      "archive": "hwdata-0.404.tar.gz",
+      "sha256": "5c14fc99bf193faad1ccc267ccfff14ee4e4550a582b17a76aec72178539f837",
+      "folder": "hwdata-0.404",
+      "script": "generated/hwdata.sh"
+    },
+    {
+      "name": "libdisplay-info",
+      "url": "https://gitlab.freedesktop.org/emersion/libdisplay-info/-/releases/0.3.0/downloads/libdisplay-info-0.3.0.tar.xz",
+      "archive": "libdisplay-info-0.3.0.tar.xz",
+      "sha256": "6ae77cd937f9cf7d1321d35c116062c4911e8447010a6a713ac4286f7a9d5987",
+      "folder": "libdisplay-info-0.3.0",
+      "script": "generated/libdisplay-info.sh"
+    },
+    {
+      "name": "mtdev",
+      "url": "https://bitmath.org/code/mtdev/mtdev-1.1.7.tar.bz2",
+      "archive": "mtdev-1.1.7.tar.bz2",
+      "sha256": "a107adad2101fecac54ac7f9f0e0a0dd155d954193da55c2340c97f2ff1d814e",
+      "folder": "mtdev-1.1.7",
+      "script": "generated/mtdev.sh"
+    },
+    {
+      "name": "libevdev",
+      "url": "https://www.freedesktop.org/software/libevdev/libevdev-1.13.6.tar.xz",
+      "archive": "libevdev-1.13.6.tar.xz",
+      "sha256": "73f215eccbd8233f414737ac06bca2687e67c44b97d2d7576091aa9718551110",
+      "folder": "libevdev-1.13.6",
+      "script": "generated/libevdev.sh"
+    },
+    {
+      "name": "libgudev",
+      "url": "https://download.gnome.org/sources/libgudev/238/libgudev-238.tar.xz",
+      "archive": "libgudev-238.tar.xz",
+      "sha256": "61266ab1afc9d73dbc60a8b2af73e99d2fdff47d99544d085760e4fa667b5dd1",
+      "folder": "libgudev-238",
+      "script": "generated/libgudev.sh"
+    },
+    {
+      "name": "libinput",
+      "url": "https://gitlab.freedesktop.org/libinput/libinput/-/archive/1.31.0/libinput-1.31.0.tar.gz",
+      "archive": "libinput-1.31.0.tar.gz",
+      "sha256": "5f95a8ce039b3b2b4560a60bbdb920518d41baa9419344e5878c94bd841d5a54",
+      "folder": "libinput-1.31.0",
+      "script": "generated/libinput.sh"
+    },
+    {
+      "name": "seatd",
+      "url": "https://git.sr.ht/~kennylevinsen/seatd/archive/0.9.3.tar.gz",
+      "archive": "0.9.3.tar.gz",
+      "sha256": "302564d54d8e28191fadfd734f2675ecb0c9e0615a58011b89ef15dfa4dbaa96",
+      "folder": "seatd-0.9.3",
+      "script": "generated/seatd.sh"
+    },
+    {
+      "name": "libgpg-error",
+      "url": "https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.59.tar.bz2",
+      "archive": "libgpg-error-1.59.tar.bz2",
+      "sha256": "a19bc5087fd97026d93cb4b45d51638d1a25202a5e1fbc3905799f424cfa6134",
+      "folder": "libgpg-error-1.59",
+      "script": "generated/libgpg-error.sh"
+    },
+    {
+      "name": "libassuan",
+      "url": "https://www.gnupg.org/ftp/gcrypt/libassuan/libassuan-3.0.2.tar.bz2",
+      "archive": "libassuan-3.0.2.tar.bz2",
+      "sha256": "d2931cdad266e633510f9970e1a2f346055e351bb19f9b78912475b8074c36f6",
+      "folder": "libassuan-3.0.2",
+      "script": "generated/libassuan.sh"
+    },
+    {
+      "name": "libxslt",
+      "url": "https://download.gnome.org/sources/libxslt/1.1/libxslt-1.1.45.tar.xz",
+      "archive": "libxslt-1.1.45.tar.xz",
+      "sha256": "9acfe68419c4d06a45c550321b3212762d92f41465062ca4ea19e632ee5d216e",
+      "folder": "libxslt-1.1.45",
+      "script": "generated/libxslt.sh"
+    },
+    {
+      "name": "libgcrypt",
+      "url": "https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.12.0.tar.bz2",
+      "archive": "libgcrypt-1.12.0.tar.bz2",
+      "sha256": "0311454e678189bad62a7e9402a9dd793025efff6e7449898616e2fc75e0f4f5",
+      "folder": "libgcrypt-1.12.0",
+      "script": "generated/libgcrypt.sh"
+    },
+    {
+      "name": "libksba",
+      "url": "https://www.gnupg.org/ftp/gcrypt/libksba/libksba-1.6.7.tar.bz2",
+      "archive": "libksba-1.6.7.tar.bz2",
+      "sha256": "cf72510b8ebb4eb6693eef765749d83677a03c79291a311040a5bfd79baab763",
+      "folder": "libksba-1.6.7",
+      "script": "generated/libksba.sh"
+    },
+    {
+      "name": "npth",
+      "url": "https://www.gnupg.org/ftp/gcrypt/npth/npth-1.8.tar.bz2",
+      "archive": "npth-1.8.tar.bz2",
+      "sha256": "8bd24b4f23a3065d6e5b26e98aba9ce783ea4fd781069c1b35d149694e90ca3e",
+      "folder": "npth-1.8",
+      "script": "generated/npth.sh"
+    },
+    {
+      "name": "git",
+      "url": "https://www.kernel.org/pub/software/scm/git/git-2.53.0.tar.xz",
+      "archive": "git-2.53.0.tar.xz",
+      "sha256": "5818bd7d80b061bbbdfec8a433d609dc8818a05991f731ffc4a561e2ca18c653",
+      "folder": "git-2.53.0",
+      "script": "generated/git.sh"
+    },
+    {
+      "name": "linux-pam",
+      "url": "https://github.com/linux-pam/linux-pam/releases/download/v1.7.2/Linux-PAM-1.7.2.tar.xz",
+      "archive": "Linux-PAM-1.7.2.tar.xz",
+      "sha256": "3d86b6383fb5fd9eb9578d2cd47d92801191f4bf3f9bc61419bfefc8aa1e531a",
+      "folder": "Linux-PAM-1.7.2",
+      "script": "generated/linux-pam.sh"
+    },
+    {
+      "name": "libxau",
+      "url": "https://www.x.org/pub/individual/lib/libXau-1.0.12.tar.xz",
+      "archive": "libXau-1.0.12.tar.xz",
+      "sha256": "74d0e4dfa3d39ad8939e99bda37f5967aba528211076828464d2777d477fc0fb",
+      "folder": "libXau-1.0.12",
+      "script": "generated/libxau.sh"
+    },
+    {
+      "name": "libxdmcp",
+      "url": "https://www.x.org/pub/individual/lib/libXdmcp-1.1.5.tar.xz",
+      "archive": "libXdmcp-1.1.5.tar.xz",
+      "sha256": "d8a5222828c3adab70adf69a5583f1d32eb5ece04304f7f8392b6a353aa2228c",
+      "folder": "libXdmcp-1.1.5",
+      "script": "generated/libxdmcp.sh"
+    },
+    {
+      "name": "xcb-proto",
+      "url": "https://xorg.freedesktop.org/archive/individual/proto/xcb-proto-1.17.0.tar.xz",
+      "archive": "xcb-proto-1.17.0.tar.xz",
+      "sha256": "2c1bacd2110f4799f74de6ebb714b94cf6f80fb112316b1219480fd22562148c",
+      "folder": "xcb-proto-1.17.0",
+      "script": "generated/xcb-proto.sh"
+    },
+    {
+      "name": "libxcb",
+      "url": "https://xorg.freedesktop.org/archive/individual/lib/libxcb-1.17.0.tar.xz",
+      "archive": "libxcb-1.17.0.tar.xz",
+      "sha256": "599ebf9996710fea71622e6e184f3a8ad5b43d0e5fa8c4e407123c88a59a6d55",
+      "folder": "libxcb-1.17.0",
+      "script": "generated/libxcb.sh"
+    },
+    {
+      "name": "gnupg",
+      "url": "https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.5.17.tar.bz2",
+      "archive": "gnupg-2.5.17.tar.bz2",
+      "sha256": "2c1fbe20e2958fd8fb53cf37d7c38e84a900edc0d561a1c4af4bc3a10888685d",
+      "folder": "gnupg-2.5.17",
+      "script": "generated/gnupg.sh"
+    },
+    {
+      "name": "alsa-lib",
+      "url": "https://www.alsa-project.org/files/pub/lib/alsa-lib-1.2.15.3.tar.bz2",
+      "archive": "alsa-lib-1.2.15.3.tar.bz2",
+      "sha256": "7b079d614d582cade7ab8db2364e65271d0877a37df8757ac4ac0c8970be861e",
+      "folder": "alsa-lib-1.2.15.3",
+      "script": "generated/alsa-lib.sh"
+    },
+    {
+      "name": "util-macros",
+      "url": "https://www.x.org/pub/individual/util/util-macros-1.20.2.tar.xz",
+      "archive": "util-macros-1.20.2.tar.xz",
+      "sha256": "9ac269eba24f672d7d7b3574e4be5f333d13f04a7712303b1821b2a51ac82e8e",
+      "folder": "util-macros-1.20.2",
+      "script": "generated/util-macros.sh"
+    },
+    {
+      "name": "gpgme",
+      "url": "https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-2.0.1.tar.bz2",
+      "archive": "gpgme-2.0.1.tar.bz2",
+      "sha256": "821ab0695c842eab51752a81980c92b0410c7eadd04103f791d5d2a526784966",
+      "folder": "gpgme-2.0.1",
+      "script": "generated/gpgme.sh"
+    },
+    {
+      "name": "xtrans",
+      "url": "https://www.x.org/pub/individual/lib/xtrans-1.6.0.tar.xz",
+      "archive": "xtrans-1.6.0.tar.xz",
+      "sha256": "faafea166bf2451a173d9d593352940ec6404145c5d1da5c213423ce4d359e92",
+      "folder": "xtrans-1.6.0",
+      "script": "generated/xtrans.sh"
+    },
+    {
+      "name": "lxml",
+      "url": "https://files.pythonhosted.org/packages/source/l/lxml/lxml-6.0.2.tar.gz",
+      "archive": "lxml-6.0.2.tar.gz",
+      "sha256": "cd79f3367bd74b317dda655dc8fcfa304d9eb6e4fb06b7168c5cf27f96e0cd62",
+      "folder": "lxml-6.0.2",
+      "script": "generated/lxml.sh"
+    },
+    {
+      "name": "libX11",
+      "url": "https://www.x.org/pub/individual/lib/libX11-1.8.13.tar.xz",
+      "archive": "libX11-1.8.13.tar.xz",
+      "sha256": "69606f485c2c07c14ef64f75b7bb326d48587af33795d9ab3e607c0b5f94f11c",
+      "folder": "libX11-1.8.13",
+      "script": "generated/libX11.sh"
+    },
+    {
+      "name": "libXext",
+      "url": "https://www.x.org/pub/individual/lib/libXext-1.3.7.tar.xz",
+      "archive": "libXext-1.3.7.tar.xz",
+      "sha256": "6c643c7035cdacf67afd68f25d01b90ef889d546c9fcd7c0adf7c2cf91e3a32d",
+      "folder": "libXext-1.3.7",
+      "script": "generated/libXext.sh"
+    },
+    {
+      "name": "libFS",
+      "url": "https://www.x.org/pub/individual/lib/libFS-1.0.10.tar.xz",
+      "archive": "libFS-1.0.10.tar.xz",
+      "sha256": "9babbd3c86069c98563da044045fdc0ece4ec0c93dcdd2c68aa74eb34b4f3b77",
+      "folder": "libFS-1.0.10",
+      "script": "generated/libFS.sh"
+    },
+    {
+      "name": "libICE",
+      "url": "https://www.x.org/pub/individual/lib/libICE-1.1.2.tar.xz",
+      "archive": "libICE-1.1.2.tar.xz",
+      "sha256": "974e4ed414225eb3c716985df9709f4da8d22a67a2890066bc6dfc89ad298625",
+      "folder": "libICE-1.1.2",
+      "script": "generated/libICE.sh"
+    },
+    {
+      "name": "libSM",
+      "url": "https://www.x.org/pub/individual/lib/libSM-1.2.6.tar.xz",
+      "archive": "libSM-1.2.6.tar.xz",
+      "sha256": "be7c0abdb15cbfd29ac62573c1c82e877f9d4047ad15321e7ea97d1e43d835be",
+      "folder": "libSM-1.2.6",
+      "script": "generated/libSM.sh"
+    },
+    {
+      "name": "libXScrnSaver",
+      "url": "https://www.x.org/pub/individual/lib/libXScrnSaver-1.2.5.tar.xz",
+      "archive": "libXScrnSaver-1.2.5.tar.xz",
+      "sha256": "5057365f847253e0e275871441e10ff7846c8322a5d88e1e187d326de1cd8d00",
+      "folder": "libXScrnSaver-1.2.5",
+      "script": "generated/libXScrnSaver.sh"
+    },
+    {
+      "name": "libsndfile",
+      "url": "https://github.com/libsndfile/libsndfile/releases/download/1.2.2/libsndfile-1.2.2.tar.xz",
+      "archive": "libsndfile-1.2.2.tar.xz",
+      "sha256": "3799ca9924d3125038880367bf1468e53a1b7e3686a934f098b7e1d286cdb80e",
+      "folder": "libsndfile-1.2.2",
+      "script": "generated/libsndfile.sh"
+    },
+    {
+      "name": "libXt",
+      "url": "https://www.x.org/pub/individual/lib/libXt-1.3.1.tar.xz",
+      "archive": "libXt-1.3.1.tar.xz",
+      "sha256": "e0a774b33324f4d4c05b199ea45050f87206586d81655f8bef4dba434d931288",
+      "folder": "libXt-1.3.1",
+      "script": "generated/libXt.sh"
+    },
+    {
+      "name": "pulseaudio",
+      "url": "https://www.freedesktop.org/software/pulseaudio/releases/pulseaudio-17.0.tar.xz",
+      "archive": "pulseaudio-17.0.tar.xz",
+      "sha256": "053794d6671a3e397d849e478a80b82a63cb9d8ca296bd35b73317bb5ceb87b5",
+      "folder": "pulseaudio-17.0",
+      "script": "generated/pulseaudio.sh"
+    },
+    {
+      "name": "libXmu",
+      "url": "https://www.x.org/pub/individual/lib/libXmu-1.3.1.tar.xz",
+      "archive": "libXmu-1.3.1.tar.xz",
+      "sha256": "81a99e94c4501e81c427cbaa4a11748b584933e94b7a156830c3621256857bc4",
+      "folder": "libXmu-1.3.1",
+      "script": "generated/libXmu.sh"
+    },
+    {
+      "name": "libXpm",
+      "url": "https://www.x.org/pub/individual/lib/libXpm-3.5.18.tar.xz",
+      "archive": "libXpm-3.5.18.tar.xz",
+      "sha256": "b4ed79bfc718000edee837d551c35286f0b84576db0ce07bbbebe60a4affa1e4",
+      "folder": "libXpm-3.5.18",
+      "script": "generated/libXpm.sh"
+    },
+    {
+      "name": "libXaw",
+      "url": "https://www.x.org/pub/individual/lib/libXaw-1.0.16.tar.xz",
+      "archive": "libXaw-1.0.16.tar.xz",
+      "sha256": "731d572b54c708f81e197a6afa8016918e2e06dfd3025e066ca642a5b8c39c8f",
+      "folder": "libXaw-1.0.16",
+      "script": "generated/libXaw.sh"
+    },
+    {
+      "name": "libXfixes",
+      "url": "https://www.x.org/pub/individual/lib/libXfixes-6.0.2.tar.xz",
+      "archive": "libXfixes-6.0.2.tar.xz",
+      "sha256": "39f115d72d9c5f8111e4684164d3d68cc1fd21f9b27ff2401b08fddfc0f409ba",
+      "folder": "libXfixes-6.0.2",
+      "script": "generated/libXfixes.sh"
+    },
+    {
+      "name": "libXcomposite",
+      "url": "https://www.x.org/pub/individual/lib/libXcomposite-0.4.7.tar.xz",
+      "archive": "libXcomposite-0.4.7.tar.xz",
+      "sha256": "8bdf310967f484503fa51714cf97bff0723d9b673e0eecbf92b3f97c060c8ccb",
+      "folder": "libXcomposite-0.4.7",
+      "script": "generated/libXcomposite.sh"
+    },
+    {
+      "name": "libXrender",
+      "url": "https://www.x.org/pub/individual/lib/libXrender-0.9.12.tar.xz",
+      "archive": "libXrender-0.9.12.tar.xz",
+      "sha256": "b832128da48b39c8d608224481743403ad1691bf4e554e4be9c174df171d1b97",
+      "folder": "libXrender-0.9.12",
+      "script": "generated/libXrender.sh"
+    },
+    {
+      "name": "libXcursor",
+      "url": "https://www.x.org/pub/individual/lib/libXcursor-1.2.3.tar.xz",
+      "archive": "libXcursor-1.2.3.tar.xz",
+      "sha256": "fde9402dd4cfe79da71e2d96bb980afc5e6ff4f8a7d74c159e1966afb2b2c2c0",
+      "folder": "libXcursor-1.2.3",
+      "script": "generated/libXcursor.sh"
+    },
+    {
+      "name": "libXdamage",
+      "url": "https://www.x.org/pub/individual/lib/libXdamage-1.1.7.tar.xz",
+      "archive": "libXdamage-1.1.7.tar.xz",
+      "sha256": "127067f521d3ee467b97bcb145aeba1078e2454d448e8748eb984d5b397bde24",
+      "folder": "libXdamage-1.1.7",
+      "script": "generated/libXdamage.sh"
+    },
+    {
+      "name": "cmake",
+      "url": "https://cmake.org/files/v4.2/cmake-4.2.3.tar.gz",
+      "archive": "cmake-4.2.3.tar.gz",
+      "sha256": "7efaccde8c5a6b2968bad6ce0fe60e19b6e10701a12fce948c2bf79bac8a11e9",
+      "folder": "cmake-4.2.3",
+      "script": "generated/cmake.sh"
+    },
+    {
+      "name": "libfontenc",
+      "url": "https://www.x.org/pub/individual/lib/libfontenc-1.1.9.tar.xz",
+      "archive": "libfontenc-1.1.9.tar.xz",
+      "sha256": "9d8392705cb10803d5fe1d27d236cbab3f664e26841ce01916bbbe430cf273e2",
+      "folder": "libfontenc-1.1.9",
+      "script": "generated/libfontenc.sh"
+    },
+    {
+      "name": "brotli",
+      "url": "https://github.com/google/brotli/archive/v1.2.0/brotli-1.2.0.tar.gz",
+      "archive": "brotli-1.2.0.tar.gz",
+      "sha256": "816c96e8e8f193b40151dad7e8ff37b1221d019dbcb9c35cd3fadbfe6477dfec",
+      "folder": "brotli-1.2.0",
+      "script": "generated/brotli.sh"
+    },
+    {
+      "name": "polkit",
+      "url": "https://github.com/polkit-org/polkit/archive/127/polkit-127.tar.gz",
+      "archive": "polkit-127.tar.gz",
+      "sha256": "9b7bc16f086479dcc626c575976568ba4a85d34297a750d8ab3d2e57f6d8b988",
+      "folder": "polkit-127",
+      "script": "generated/polkit.sh"
+    },
+    {
+      "name": "freetype2",
+      "url": "https://downloads.sourceforge.net/freetype/freetype-2.14.1.tar.xz",
+      "archive": "freetype-2.14.1.tar.xz",
+      "sha256": "32427e8c471ac095853212a37aef816c60b42052d4d9e48230bab3bdf2936ccc",
+      "folder": "freetype-2.14.1",
+      "script": "generated/freetype2.sh"
+    },
+    {
+      "name": "fontconfig",
+      "url": "https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/fontconfig/2.17.1/fontconfig-2.17.1.tar.xz",
+      "archive": "fontconfig-2.17.1.tar.xz",
+      "sha256": "9f5cae93f4fffc1fbc05ae99cdfc708cd60dfd6612ffc0512827025c026fa541",
+      "folder": "fontconfig-2.17.1",
+      "script": "generated/fontconfig.sh"
+    },
+    {
+      "name": "libXfont2",
+      "url": "https://www.x.org/pub/individual/lib/libXfont2-2.0.7.tar.xz",
+      "archive": "libXfont2-2.0.7.tar.xz",
+      "sha256": "8b7b82fdeba48769b69433e8e3fbb984a5f6bf368b0d5f47abeec49de3e58efb",
+      "folder": "libXfont2-2.0.7",
+      "script": "generated/libXfont2.sh"
+    },
+    {
+      "name": "libXft",
+      "url": "https://www.x.org/pub/individual/lib/libXft-2.3.9.tar.xz",
+      "archive": "libXft-2.3.9.tar.xz",
+      "sha256": "60a25b78945ed6932635b3bb1899a517d31df7456e69867ffba27f89ff3976f5",
+      "folder": "libXft-2.3.9",
+      "script": "generated/libXft.sh"
+    },
+    {
+      "name": "libXi",
+      "url": "https://www.x.org/pub/individual/lib/libXi-1.8.2.tar.xz",
+      "archive": "libXi-1.8.2.tar.xz",
+      "sha256": "d0e0555e53d6e2114eabfa44226ba162d2708501a25e18d99cfb35c094c6c104",
+      "folder": "libXi-1.8.2",
+      "script": "generated/libXi.sh"
+    },
+    {
+      "name": "libXinerama",
+      "url": "https://www.x.org/pub/individual/lib/libXinerama-1.1.6.tar.xz",
+      "archive": "libXinerama-1.1.6.tar.xz",
+      "sha256": "d00fc1599c303dc5cbc122b8068bdc7405d6fcb19060f4597fc51bd3a8be51d7",
+      "folder": "libXinerama-1.1.6",
+      "script": "generated/libXinerama.sh"
+    },
+    {
+      "name": "libXrandr",
+      "url": "https://www.x.org/pub/individual/lib/libXrandr-1.5.5.tar.xz",
+      "archive": "libXrandr-1.5.5.tar.xz",
+      "sha256": "72b922c2e765434e9e9f0960148070bd4504b288263e2868a4ccce1b7cf2767a",
+      "folder": "libXrandr-1.5.5",
+      "script": "generated/libXrandr.sh"
+    },
+    {
+      "name": "libXres",
+      "url": "https://www.x.org/pub/individual/lib/libXres-1.2.3.tar.xz",
+      "archive": "libXres-1.2.3.tar.xz",
+      "sha256": "d2de8f5401d6c86a8992791654547eb8def585dfdc0c08cc16e24ef6aeeb69dc",
+      "folder": "libXres-1.2.3",
+      "script": "generated/libXres.sh"
+    },
+    {
+      "name": "libXtst",
+      "url": "https://www.x.org/pub/individual/lib/libXtst-1.2.5.tar.xz",
+      "archive": "libXtst-1.2.5.tar.xz",
+      "sha256": "b50d4c25b97009a744706c1039c598f4d8e64910c9fde381994e1cae235d9242",
+      "folder": "libXtst-1.2.5",
+      "script": "generated/libXtst.sh"
+    },
+    {
+      "name": "libXv",
+      "url": "https://www.x.org/pub/individual/lib/libXv-1.0.13.tar.xz",
+      "archive": "libXv-1.0.13.tar.xz",
+      "sha256": "7d34910958e1c1f8d193d828fea1b7da192297280a35437af0692f003ba03755",
+      "folder": "libXv-1.0.13",
+      "script": "generated/libXv.sh"
+    },
+    {
+      "name": "libXvMC",
+      "url": "https://www.x.org/pub/individual/lib/libXvMC-1.0.15.tar.xz",
+      "archive": "libXvMC-1.0.15.tar.xz",
+      "sha256": "4f518afde3d7fd435346af7b368d2f73517f3d5f82647c962caf3f7bb8ff7078",
+      "folder": "libXvMC-1.0.15",
+      "script": "generated/libXvMC.sh"
+    },
+    {
+      "name": "libXxf86dga",
+      "url": "https://www.x.org/pub/individual/lib/libXxf86dga-1.1.7.tar.xz",
+      "archive": "libXxf86dga-1.1.7.tar.xz",
+      "sha256": "b3be5b444d324cb6e0f4b5019a4972c99ea336ccb8ab7968eccefecd917ffde6",
+      "folder": "libXxf86dga-1.1.7",
+      "script": "generated/libXxf86dga.sh"
+    },
+    {
+      "name": "libXxf86vm",
+      "url": "https://www.x.org/pub/individual/lib/libXxf86vm-1.1.7.tar.xz",
+      "archive": "libXxf86vm-1.1.7.tar.xz",
+      "sha256": "ae50c0f669e0af5a67cc4cd0f54f21d64a64d2660af883e80e95d3fe51b945d8",
+      "folder": "libXxf86vm-1.1.7",
+      "script": "generated/libXxf86vm.sh"
+    },
+    {
+      "name": "libpciaccess",
+      "url": "https://www.x.org/pub/individual/lib/libpciaccess-0.18.1.tar.xz",
+      "archive": "libpciaccess-0.18.1.tar.xz",
+      "sha256": "4af43444b38adb5545d0ed1c2ce46d9608cc47b31c2387fc5181656765a6fa76",
+      "folder": "libpciaccess-0.18.1",
+      "script": "generated/libpciaccess.sh"
+    },
+    {
+      "name": "libunistring",
+      "url": "https://ftpmirror.gnu.org/libunistring/libunistring-1.4.1.tar.xz",
+      "archive": "libunistring-1.4.1.tar.xz",
+      "sha256": "67d88430892527861903788868c77802a217b0959990f7449f2976126a307763",
+      "folder": "libunistring-1.4.1",
+      "script": "generated/libunistring.sh"
+    },
+    {
+      "name": "libxkbfile",
+      "url": "https://www.x.org/pub/individual/lib/libxkbfile-1.2.0.tar.xz",
+      "archive": "libxkbfile-1.2.0.tar.xz",
+      "sha256": "7f71884e5faf56fb0e823f3848599cf9b5a9afce51c90982baeb64f635233ebf",
+      "folder": "libxkbfile-1.2.0",
+      "script": "generated/libxkbfile.sh"
+    },
+    {
+      "name": "libxshmfence",
+      "url": "https://www.x.org/pub/individual/lib/libxshmfence-1.3.3.tar.xz",
+      "archive": "libxshmfence-1.3.3.tar.xz",
+      "sha256": "d4a4df096aba96fea02c029ee3a44e11a47eb7f7213c1a729be83e85ec3fde10",
+      "folder": "libxshmfence-1.3.3",
+      "script": "generated/libxshmfence.sh"
+    },
+    {
+      "name": "libXpresent",
+      "url": "https://www.x.org/pub/individual/lib/libXpresent-1.0.2.tar.xz",
+      "archive": "libXpresent-1.0.2.tar.xz",
+      "sha256": "4e5b21b4812206a4b223013606ae31170502c1043038777a1ef8f70c09d37602",
+      "folder": "libXpresent-1.0.2",
+      "script": "generated/libXpresent.sh"
+    },
+    {
+      "name": "libidn2",
+      "url": "https://ftpmirror.gnu.org/libidn/libidn2-2.3.8.tar.gz",
+      "archive": "libidn2-2.3.8.tar.gz",
+      "sha256": "f557911bf6171621e1f72ff35f5b1825bb35b52ed45325dcdee931e5d3c0787a",
+      "folder": "libidn2-2.3.8",
+      "script": "generated/libidn2.sh"
+    },
+    {
+      "name": "libglvnd",
+      "url": "https://github.com/NVIDIA/libglvnd/archive/v1.7.0.tar.gz",
+      "archive": "v1.7.0.tar.gz",
+      "sha256": "073e7292788d4d3eeb45ea6c7bdcce9bfdb3b3eef8d7dbd47f2f30dce046ef98",
+      "folder": "libglvnd-1.7.0",
+      "script": "generated/libglvnd.sh"
+    },
+    {
+      "name": "vulkan-headers",
+      "url": "https://github.com/KhronosGroup/Vulkan-Headers/archive/vulkan-sdk-1.4.341.0/Vulkan-Headers-vulkan-sdk-1.4.341.0.tar.gz",
+      "archive": "Vulkan-Headers-vulkan-sdk-1.4.341.0.tar.gz",
+      "sha256": "d73bc5036b6556b741f6985ff600ca720308c5f2850e4a43ceb498bd3de069e7",
+      "folder": "Vulkan-Headers-vulkan-sdk-1.4.341.0",
+      "script": "generated/vulkan-headers.sh"
+    },
+    {
+      "name": "vulkan-loader",
+      "url": "https://github.com/KhronosGroup/Vulkan-Loader/archive/vulkan-sdk-1.4.341.0/Vulkan-Loader-vulkan-sdk-1.4.341.0.tar.gz",
+      "archive": "Vulkan-Loader-vulkan-sdk-1.4.341.0.tar.gz",
+      "sha256": "fe982697c780a950641bfcf94707135c26c501352242d285fa95d087d691292e",
+      "folder": "Vulkan-Loader-vulkan-sdk-1.4.341.0",
+      "script": "generated/vulkan-loader.sh"
+    },
+    {
+      "name": "libtasn1",
+      "url": "https://ftpmirror.gnu.org/libtasn1/libtasn1-4.21.0.tar.gz",
+      "archive": "libtasn1-4.21.0.tar.gz",
+      "sha256": "1d8a444a223cc5464240777346e125de51d8e6abf0b8bac742ac84609167dc87",
+      "folder": "libtasn1-4.21.0",
+      "script": "generated/libtasn1.sh"
+    },
+    {
+      "name": "p11-kit",
+      "url": "https://github.com/p11-glue/p11-kit/releases/download/0.26.2/p11-kit-0.26.2.tar.xz",
+      "archive": "p11-kit-0.26.2.tar.xz",
+      "sha256": "09fd9f44da4813a3141e73d5e7cf7008e5660d0405f13d56c15e1da9dcecf828",
+      "folder": "p11-kit-0.26.2",
+      "script": "generated/p11-kit.sh"
+    },
+    {
+      "name": "accountsservice",
+      "url": "https://www.freedesktop.org/software/accountsservice/accountsservice-23.13.9.tar.xz",
+      "archive": "accountsservice-23.13.9.tar.xz",
+      "sha256": "adda4cdeae24fa0992e7df3ffff9effa7090be3ac233a3edfdf69d5a9c9b924f",
+      "folder": "accountsservice-23.13.9",
+      "script": "generated/accountsservice.sh"
+    },
+    {
+      "name": "upower",
+      "url": "https://gitlab.freedesktop.org/upower/upower/-/archive/v1.91.1/upower-v1.91.1.tar.bz2",
+      "archive": "upower-v1.91.1.tar.bz2",
+      "sha256": "d568638d670a63a1886335b7b136f4888cb38a3b28f3f4bcdeaffcca0b0f6df8",
+      "folder": "upower-v1.91.1",
+      "script": "generated/upower.sh"
+    },
+    {
+      "name": "gsettings-desktop-schemas",
+      "url": "https://download.gnome.org/sources/gsettings-desktop-schemas/49/gsettings-desktop-schemas-49.1.tar.xz",
+      "archive": "gsettings-desktop-schemas-49.1.tar.xz",
+      "sha256": "777a7f83d5e5a8076b9bf809cb24101b1b1ba9c230235e3c3de8e13968ed0e63",
+      "folder": "gsettings-desktop-schemas-49.1",
+      "script": "generated/gsettings-desktop-schemas.sh"
+    },
+    {
+      "name": "nettle",
+      "url": "https://ftpmirror.gnu.org/nettle/nettle-3.10.2.tar.gz",
+      "archive": "nettle-3.10.2.tar.gz",
+      "sha256": "fe9ff51cb1f2abb5e65a6b8c10a92da0ab5ab6eaf26e7fc2b675c45f1fb519b5",
+      "folder": "nettle-3.10.2",
+      "script": "generated/nettle.sh"
+    },
+    {
+      "name": "mesa",
+      "url": "https://mesa.freedesktop.org/archive/mesa-25.3.5.tar.xz",
+      "archive": "mesa-25.3.5.tar.xz",
+      "sha256": "be472413475082df945e0f9be34f5af008baa03eb357e067ce5a611a2d44c44b",
+      "folder": "mesa-25.3.5",
+      "script": "generated/mesa.sh"
+    },
+    {
+      "name": "libepoxy",
+      "url": "https://download.gnome.org/sources/libepoxy/1.5/libepoxy-1.5.10.tar.xz",
+      "archive": "libepoxy-1.5.10.tar.xz",
+      "sha256": "072cda4b59dd098bba8c2363a6247299db1fa89411dc221c8b81b8ee8192e623",
+      "folder": "libepoxy-1.5.10",
+      "script": "generated/libepoxy.sh"
+    },
+    {
+      "name": "dconf",
+      "url": "https://download.gnome.org/sources/dconf/0.49/dconf-0.49.0.tar.xz",
+      "archive": "dconf-0.49.0.tar.xz",
+      "sha256": "16a47e49a58156dbb96578e1708325299e4c19eea9be128d5bd12fd0963d6c36",
+      "folder": "dconf-0.49.0",
+      "script": "generated/dconf.sh"
+    },
+    {
+      "name": "libsecret",
+      "url": "https://download.gnome.org/sources/libsecret/0.21/libsecret-0.21.7.tar.xz",
+      "archive": "libsecret-0.21.7.tar.xz",
+      "sha256": "6b452e4750590a2b5617adc40026f28d2f4903de15f1250e1d1c40bfd68ed55e",
+      "folder": "libsecret-0.21.7",
+      "script": "generated/libsecret.sh"
+    },
+    {
+      "name": "gnutls",
+      "url": "https://www.gnupg.org/ftp/gcrypt/gnutls/v3.8/gnutls-3.8.12.tar.xz",
+      "archive": "gnutls-3.8.12.tar.xz",
+      "sha256": "a7b341421bfd459acf7a374ca4af3b9e06608dcd7bd792b2bf470bea012b8e51",
+      "folder": "gnutls-3.8.12",
+      "script": "generated/gnutls.sh"
+    },
+    {
+      "name": "libpsl",
+      "url": "https://github.com/rockdaboot/libpsl/releases/download/0.21.5/libpsl-0.21.5.tar.gz",
+      "archive": "libpsl-0.21.5.tar.gz",
+      "sha256": "1dcc9ceae8b128f3c0b3f654decd0e1e891afc6ff81098f227ef260449dae208",
+      "folder": "libpsl-0.21.5",
+      "script": "generated/libpsl.sh"
+    },
+    {
+      "name": "libndp",
+      "url": "https://ftp.osuosl.org/pub/blfs/conglomeration/libndp/libndp-1.9.tar.gz",
+      "archive": "libndp-1.9.tar.gz",
+      "sha256": "a8ab214e01dc3a9b615276905395637f391298c84d77651f0cbf0b1082dd2dd4",
+      "folder": "libndp-1.9",
+      "script": "generated/libndp.sh"
+    },
+    {
+      "name": "libarchive",
+      "url": "https://github.com/libarchive/libarchive/releases/download/v3.8.5/libarchive-3.8.5.tar.xz",
+      "archive": "libarchive-3.8.5.tar.xz",
+      "sha256": "d68068e74beee3a0ec0dd04aee9037d5757fcc651591a6dcf1b6d542fb15a703",
+      "folder": "libarchive-3.8.5",
+      "script": "generated/libarchive.sh"
+    },
+    {
+      "name": "libfyaml",
+      "url": "https://github.com/pantoniou/libfyaml/releases/download/v0.9.4/libfyaml-0.9.4.tar.gz",
+      "archive": "libfyaml-0.9.4.tar.gz",
+      "sha256": "dac2b0af7b757b32a4fa7c6493d85d0f7dea6effd20ae4352570b6a450b9e5fb",
+      "folder": "libfyaml-0.9.4",
+      "script": "generated/libfyaml.sh"
+    },
+    {
+      "name": "libyaml",
+      "url": "https://github.com/yaml/libyaml/releases/download/0.2.5/yaml-0.2.5.tar.gz",
+      "archive": "yaml-0.2.5.tar.gz",
+      "sha256": "c642ae9b75fee120b2d96c712538bd2cf283228d2337df2cf2988e3c02678ef4",
+      "folder": "yaml-0.2.5",
+      "script": "generated/libyaml.sh"
+    },
+    {
+      "name": "libxmlb",
+      "url": "https://github.com/hughsie/libxmlb/releases/download/0.3.25/libxmlb-0.3.25.tar.xz",
+      "archive": "libxmlb-0.3.25.tar.xz",
+      "sha256": "77f2768c9debd2e946173cdf9465efd987849805e7c58251c5772ea728a61d9a",
+      "folder": "libxmlb-0.3.25",
+      "script": "generated/libxmlb.sh"
+    },
+    {
+      "name": "itstool",
+      "url": "https://github.com/itstool/itstool/archive/2.0.7/itstool-2.0.7.tar.gz",
+      "archive": "itstool-2.0.7.tar.gz",
+      "sha256": "fba78a37dc3535e4686c7f57407b97d03c676e3a57beac5fb2315162b0cc3176",
+      "folder": "itstool-2.0.7",
+      "script": "generated/itstool.sh"
+    },
+    {
+      "name": "appstream",
+      "url": "https://www.freedesktop.org/software/appstream/releases/AppStream-1.1.2.tar.xz",
+      "archive": "AppStream-1.1.2.tar.xz",
+      "sha256": "46b4257100e25a6468ceed7b3ab82441f47b119da3398d30aea6d7b91174b586",
+      "folder": "AppStream-1.1.2",
+      "script": "generated/appstream.sh"
+    },
+    {
+      "name": "harfbuzz",
+      "url": "https://github.com/harfbuzz/harfbuzz/releases/download/12.3.2/harfbuzz-12.3.2.tar.xz",
+      "archive": "harfbuzz-12.3.2.tar.xz",
+      "sha256": "6f6db164359a2da5a84ef826615b448b33e6306067ad829d85d5b0bf936f1bb8",
+      "folder": "harfbuzz-12.3.2",
+      "script": "generated/harfbuzz.sh"
+    },
+    {
+      "name": "libseccomp",
+      "url": "https://github.com/seccomp/libseccomp/releases/download/v2.6.0/libseccomp-2.6.0.tar.gz",
+      "archive": "libseccomp-2.6.0.tar.gz",
+      "sha256": "83b6085232d1588c379dc9b9cae47bb37407cf262e6e74993c61ba72d2a784dc",
+      "folder": "libseccomp-2.6.0",
+      "script": "generated/libseccomp.sh"
+    },
+    {
+      "name": "bubblewrap",
+      "url": "https://github.com/containers/bubblewrap/releases/download/v0.11.0/bubblewrap-0.11.0.tar.xz",
+      "archive": "bubblewrap-0.11.0.tar.xz",
+      "sha256": "988fd6b232dafa04b8b8198723efeaccdb3c6aa9c1c7936219d5791a8b7a8646",
+      "folder": "bubblewrap-0.11.0",
+      "script": "generated/bubblewrap.sh"
+    },
+    {
+      "name": "fuse",
+      "url": "https://github.com/libfuse/libfuse/releases/download/fuse-3.18.1/fuse-3.18.1.tar.gz",
+      "archive": "fuse-3.18.1.tar.gz",
+      "sha256": "dd395c88f29c7540bbdd0b830260ab8092ccb241bb6e66f603643f715fb9322c",
+      "folder": "fuse-3.18.1",
+      "script": "generated/fuse.sh"
+    },
+    {
+      "name": "networkmanager",
+      "url": "https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/releases/1.56.0/downloads/NetworkManager-1.56.0.tar.xz",
+      "archive": "NetworkManager-1.56.0.tar.xz",
+      "sha256": "59a32d385cc1e7ae26e43798c6f12d07ff6198abd041ec0620b3a08cfc021ccc",
+      "folder": "NetworkManager-1.56.0",
+      "script": "generated/networkmanager.sh"
+    },
+    {
+      "name": "xdg-dbus-proxy",
+      "url": "https://github.com/flatpak/xdg-dbus-proxy/releases/download/0.1.6/xdg-dbus-proxy-0.1.6.tar.xz",
+      "archive": "xdg-dbus-proxy-0.1.6.tar.xz",
+      "sha256": "131bf59fce7c7ee7ecbc5d9106d6750f4f597bfe609966573240f7e4952973a1",
+      "folder": "xdg-dbus-proxy-0.1.6",
+      "script": "generated/xdg-dbus-proxy.sh"
+    },
+    {
+      "name": "freetype-final",
+      "url": "https://downloads.sourceforge.net/freetype/freetype-2.14.1.tar.xz",
+      "archive": "freetype-2.14.1.tar.xz",
+      "sha256": "32427e8c471ac095853212a37aef816c60b42052d4d9e48230bab3bdf2936ccc",
+      "folder": "freetype-2.14.1",
+      "script": "generated/freetype-final.sh"
+    },
+    {
+      "name": "fribidi",
+      "url": "https://github.com/fribidi/fribidi/releases/download/v1.0.16/fribidi-1.0.16.tar.xz",
+      "archive": "fribidi-1.0.16.tar.xz",
+      "sha256": "1b1cde5b235d40479e91be2f0e88a309e3214c8ab470ec8a2744d82a5a9ea05c",
+      "folder": "fribidi-1.0.16",
+      "script": "generated/fribidi.sh"
+    },
+    {
+      "name": "ostree",
+      "url": "https://github.com/ostreedev/ostree/releases/download/v2026.7/libostree-2026.7.tar.xz",
+      "archive": "libostree-2026.7.tar.xz",
+      "sha256": "43e0295e869927edfd41e7cb9cdf5ca8f8515a6f1460af4b381f1f701168494c",
+      "folder": "libostree-2026.7",
+      "script": "generated/ostree.sh"
+    },
+    {
+      "name": "pipewire",
+      "url": "https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.0/pipewire-1.6.0.tar.bz2",
+      "archive": "pipewire-1.6.0.tar.bz2",
+      "sha256": "3ade6470828ca76a7a17fd3174d89bbb435a34e81e4ba9064670a711d2d816a0",
+      "folder": "pipewire-1.6.0",
+      "script": "generated/pipewire.sh"
+    },
+    {
+      "name": "lua",
+      "url": "https://www.lua.org/ftp/lua-5.4.8.tar.gz",
+      "archive": "lua-5.4.8.tar.gz",
+      "sha256": "4f18ddae154e793e46eeab727c59ef1c0c0c2b744e7b94219710d76f530629ae",
+      "folder": "lua-5.4.8",
+      "script": "generated/lua.sh"
+    },
+    {
+      "name": "wireplumber",
+      "url": "https://gitlab.freedesktop.org/pipewire/wireplumber/-/archive/0.5.13/wireplumber-0.5.13.tar.bz2",
+      "archive": "wireplumber-0.5.13.tar.bz2",
+      "sha256": "056033cd4fa551b947eebd697bbf78fa9e6baf8f7f12cb5395656aa619de4946",
+      "folder": "wireplumber-0.5.13",
+      "script": "generated/wireplumber.sh"
+    },
+    {
+      "name": "cairo",
+      "url": "https://www.cairographics.org/releases/cairo-1.18.4.tar.xz",
+      "archive": "cairo-1.18.4.tar.xz",
+      "sha256": "445ed8208a6e4823de1226a74ca319d3600e83f6369f99b14265006599c32ccb",
+      "folder": "cairo-1.18.4",
+      "script": "generated/cairo.sh"
+    },
+    {
+      "name": "pango",
+      "url": "https://download.gnome.org/sources/pango/1.57/pango-1.57.0.tar.xz",
+      "archive": "pango-1.57.0.tar.xz",
+      "sha256": "890640c841dae77d3ae3d8fe8953784b930fa241b17423e6120c7bfdf8b891e7",
+      "folder": "pango-1.57.0",
+      "script": "generated/pango.sh"
+    },
+    {
+      "name": "libjpeg",
+      "url": "https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.3/libjpeg-turbo-3.1.3.tar.gz",
+      "archive": "libjpeg-turbo-3.1.3.tar.gz",
+      "sha256": "075920b826834ac4ddf97661cc73491047855859affd671d52079c6867c1c6c0",
+      "folder": "libjpeg-turbo-3.1.3",
+      "script": "generated/libjpeg.sh"
+    },
+    {
+      "name": "libtiff",
+      "url": "https://download.osgeo.org/libtiff/tiff-4.7.1.tar.gz",
+      "archive": "tiff-4.7.1.tar.gz",
+      "sha256": "f698d94f3103da8ca7438d84e0344e453fe0ba3b7486e04c5bf7a9a3fabe9b69",
+      "folder": "tiff-4.7.1",
+      "script": "generated/libtiff.sh"
+    },
+    {
+      "name": "libwebp",
+      "url": "https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0.tar.gz",
+      "archive": "libwebp-1.6.0.tar.gz",
+      "sha256": "e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564",
+      "folder": "libwebp-1.6.0",
+      "script": "generated/libwebp.sh"
+    },
+    {
+      "name": "dav1d",
+      "url": "https://code.videolan.org/videolan/dav1d/-/archive/1.5.3/dav1d-1.5.3.tar.gz",
+      "archive": "dav1d-1.5.3.tar.gz",
+      "sha256": "cbe212b02faf8c6eed5b6d55ef8a6e363aaab83f15112e960701a9c3df813686",
+      "folder": "dav1d-1.5.3",
+      "script": "generated/dav1d.sh"
+    },
+    {
+      "name": "shared-mime-info",
+      "url": "https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/2.4/shared-mime-info-2.4.tar.gz",
+      "archive": "shared-mime-info-2.4.tar.gz",
+      "sha256": "531291d0387eb94e16e775d7e73788d06d2b2fdd8cd2ac6b6b15287593b6a2de",
+      "folder": "shared-mime-info-2.4",
+      "script": "generated/shared-mime-info.sh"
+    },
+    {
+      "name": "desktop-file-utils",
+      "url": "https://www.freedesktop.org/software/desktop-file-utils/releases/desktop-file-utils-0.28.tar.xz",
+      "archive": "desktop-file-utils-0.28.tar.xz",
+      "sha256": "4401d4e231d842c2de8242395a74a395ca468cd96f5f610d822df33594898a70",
+      "folder": "desktop-file-utils-0.28",
+      "script": "generated/desktop-file-utils.sh"
+    },
+    {
+      "name": "hicolor-icon-theme",
+      "url": "https://icon-theme.freedesktop.org/releases/hicolor-icon-theme-0.18.tar.xz",
+      "archive": "hicolor-icon-theme-0.18.tar.xz",
+      "sha256": "db0e50a80aa3bf64bb45cbca5cf9f75efd9348cf2ac690b907435238c3cf81d7",
+      "folder": "hicolor-icon-theme-0.18",
+      "script": "generated/hicolor-icon-theme.sh"
+    },
+    {
+      "name": "gdk-pixbuf",
+      "url": "https://download.gnome.org/sources/gdk-pixbuf/2.44/gdk-pixbuf-2.44.5.tar.xz",
+      "archive": "gdk-pixbuf-2.44.5.tar.xz",
+      "sha256": "69b93e09139b80c0ee661503d60deb5a5874a31772b5184b9cd5462a4100ab68",
+      "folder": "gdk-pixbuf-2.44.5",
+      "script": "generated/gdk-pixbuf.sh"
+    },
+    {
+      "name": "nspr",
+      "url": "https://archive.mozilla.org/pub/nspr/releases/v4.38.2/src/nspr-4.38.2.tar.gz",
+      "archive": "nspr-4.38.2.tar.gz",
+      "sha256": "e4092faeab77bdc9b32db1113e4215948ee768e26c4666db3b5a60b35f2c9105",
+      "folder": "nspr-4.38.2",
+      "script": "generated/nspr.sh"
+    },
+    {
+      "name": "pyparsing",
+      "url": "https://files.pythonhosted.org/packages/source/p/pyparsing/pyparsing-3.3.3.tar.gz",
+      "archive": "pyparsing-3.3.3.tar.gz",
+      "sha256": "928ae7e20211f3b6f3915a72f06a0cfd29ab9d24279dd6346b6b1a7146397d36",
+      "folder": "pyparsing-3.3.3",
+      "script": "generated/pyparsing.sh"
+    },
+    {
+      "name": "flatpak",
+      "url": "https://github.com/flatpak/flatpak/releases/download/1.18.4/flatpak-1.18.4.tar.xz",
+      "archive": "flatpak-1.18.4.tar.xz",
+      "sha256": "b899a7a00c48d2c626cb8ec33fe556720b376c25805d7222430c0fdca4c6ac8d",
+      "folder": "flatpak-1.18.4",
+      "script": "generated/flatpak.sh"
+    },
+    {
+      "name": "libogg",
+      "url": "https://downloads.xiph.org/releases/ogg/libogg-1.3.6.tar.xz",
+      "archive": "libogg-1.3.6.tar.xz",
+      "sha256": "5c8253428e181840cd20d41f3ca16557a9cc04bad4a3d04cce84808677fa1061",
+      "folder": "libogg-1.3.6",
+      "script": "generated/libogg.sh"
+    },
+    {
+      "name": "libvorbis",
+      "url": "https://downloads.xiph.org/releases/vorbis/libvorbis-1.3.7.tar.xz",
+      "archive": "libvorbis-1.3.7.tar.xz",
+      "sha256": "b33cc4934322bcbf6efcbacf49e3ca01aadbea4114ec9589d1b1e9d20f72954b",
+      "folder": "libvorbis-1.3.7",
+      "script": "generated/libvorbis.sh"
+    },
+    {
+      "name": "gstreamer",
+      "url": "https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.28.1.tar.xz",
+      "archive": "gstreamer-1.28.1.tar.xz",
+      "sha256": "b65e2ffa35bdbf8798cb75c23ffc3d05e484e48346ff7546844ba85217664504",
+      "folder": "gstreamer-1.28.1",
+      "script": "generated/gstreamer.sh"
+    },
+    {
+      "name": "nss",
+      "url": "https://archive.mozilla.org/pub/security/nss/releases/NSS_3_120_1_RTM/src/nss-3.120.1.tar.gz",
+      "archive": "nss-3.120.1.tar.gz",
+      "sha256": "a98f002d20bfe719f50f81824a64c9e6f067f4da3c6a1f0455e97e6d79240512",
+      "folder": "nss-3.120.1",
+      "script": "generated/nss.sh"
+    },
+    {
+      "name": "gst-plugins-base",
+      "url": "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.28.1.tar.xz",
+      "archive": "gst-plugins-base-1.28.1.tar.xz",
+      "sha256": "1446a4c2a92ff5d78d88e85a599f0038441d53333236f0c72d72f21a9c132497",
+      "folder": "gst-plugins-base-1.28.1",
+      "script": "generated/gst-plugins-base.sh"
+    },
+    {
+      "name": "cups",
+      "url": "https://github.com/OpenPrinting/cups/releases/download/v2.4.16/cups-2.4.16-source.tar.gz",
+      "archive": "cups-2.4.16-source.tar.gz",
+      "sha256": "0339587204b4f9428dd0592eb301dec0bf9ea6ea8dce5d9690d56be585aba92d",
+      "folder": "cups-2.4.16",
+      "script": "generated/cups.sh"
+    },
+    {
+      "name": "xdg-desktop-portal",
+      "url": "https://github.com/flatpak/xdg-desktop-portal/releases/download/1.20.3/xdg-desktop-portal-1.20.3.tar.xz",
+      "archive": "xdg-desktop-portal-1.20.3.tar.xz",
+      "sha256": "4bfb164937f59107eb1a3cc21abaa948d903c76f3b99fac210cea38ce1da9edc",
+      "folder": "xdg-desktop-portal-1.20.3",
+      "script": "generated/xdg-desktop-portal.sh"
+    },
+    {
+      "name": "at-spi2-core",
+      "url": "https://download.gnome.org/sources/at-spi2-core/2.58/at-spi2-core-2.58.3.tar.xz",
+      "archive": "at-spi2-core-2.58.3.tar.xz",
+      "sha256": "b0fabea6c9742eda8c9c675f9b8c1d1babba1da82da03ea1103710233717c1b0",
+      "folder": "at-spi2-core-2.58.3",
+      "script": "generated/at-spi2-core.sh"
+    },
+    {
+      "name": "gtk3",
+      "url": "https://download.gnome.org/sources/gtk/3.24/gtk-3.24.51.tar.xz",
+      "archive": "gtk-3.24.51.tar.xz",
+      "sha256": "0013877c6bd23c2dbe42ad7c70a053d0e449be66736574e37867c49c5f905a4f",
+      "folder": "gtk-3.24.51",
+      "script": "generated/gtk3.sh"
+    },
+    {
+      "name": "xdg-desktop-portal-gtk",
+      "url": "https://github.com/flatpak/xdg-desktop-portal-gtk/releases/download/1.15.3/xdg-desktop-portal-gtk-1.15.3.tar.xz",
+      "archive": "xdg-desktop-portal-gtk-1.15.3.tar.xz",
+      "sha256": "47a3743d2419a8601e691db37e85bb5fac5ae4b26842177065cd5f22ada23b37",
+      "folder": "xdg-desktop-portal-gtk-1.15.3",
+      "script": "generated/xdg-desktop-portal-gtk.sh"
+    },
+    {
+      "name": "cargo-c",
+      "url": "https://github.com/lu-zero/cargo-c/archive/v0.10.20/cargo-c-0.10.20.tar.gz",
+      "archive": "cargo-c-0.10.20.tar.gz",
+      "sha256": "9bdf7c10b44466a7c01dc4ed152da5031793cca9e0c8009d73223a32522cf2c3",
+      "folder": "cargo-c-0.10.20",
+      "script": "generated/cargo-c.sh"
+    },
+    {
+      "name": "gcr",
+      "url": "https://download.gnome.org/sources/gcr/3.41/gcr-3.41.2.tar.xz",
+      "archive": "gcr-3.41.2.tar.xz",
+      "sha256": "bad10f3c553a0e1854649ab59c5b2434da22ca1a54ae6138f1f53961567e1ab7",
+      "folder": "gcr-3.41.2",
+      "script": "generated/gcr.sh"
+    },
+    {
+      "name": "librsvg",
+      "url": "https://download.gnome.org/sources/librsvg/2.61/librsvg-2.61.4.tar.xz",
+      "archive": "librsvg-2.61.4.tar.xz",
+      "sha256": "fca0ea28d1f28f95c8407d2579f4702dac085e7c758644daca8b40d1e072ca0c",
+      "folder": "librsvg-2.61.4",
+      "script": "generated/librsvg.sh"
+    },
+    {
+      "name": "adwaita-icon-theme",
+      "url": "https://download.gnome.org/sources/adwaita-icon-theme/49/adwaita-icon-theme-49.0.tar.xz",
+      "archive": "adwaita-icon-theme-49.0.tar.xz",
+      "sha256": "65166461d1b278aa942f59aa8d0fccf1108d71c65f372c6266e172449791755c",
+      "folder": "adwaita-icon-theme-49.0",
+      "script": "generated/adwaita-icon-theme.sh"
+    },
+    {
+      "name": "gnome-keyring",
+      "url": "https://download.gnome.org/sources/gnome-keyring/48/gnome-keyring-48.0.tar.xz",
+      "archive": "gnome-keyring-48.0.tar.xz",
+      "sha256": "f20518c920e9ea3f9c9b8b44be8c50d8d7feecd0dd5624960f77bd2ca4fbeb9d",
+      "folder": "gnome-keyring-48.0",
+      "script": "generated/gnome-keyring.sh"
+    },
+    {
+      "name": "liberation-fonts",
+      "url": "https://github.com/liberationfonts/liberation-fonts/files/7261482/liberation-fonts-ttf-2.1.5.tar.gz",
+      "archive": "liberation-fonts-ttf-2.1.5.tar.gz",
+      "sha256": "7191c669bf38899f73a2094ed00f7b800553364f90e2637010a69c0e268f25d0",
+      "folder": "liberation-fonts-ttf-2.1.5",
+      "script": "generated/liberation-fonts.sh"
+    },
+    {
+      "name": "greetd",
+      "url": "https://git.sr.ht/~kennylevinsen/greetd/archive/0.10.3.tar.gz",
+      "archive": "0.10.3.tar.gz",
+      "sha256": "ee5cb70e0add4ca9c9fe57e47581ab0002d44c07743fb5492469f3b570db640b",
+      "folder": "greetd-0.10.3",
+      "script": "generated/greetd.sh"
+    }
+  ]
+}

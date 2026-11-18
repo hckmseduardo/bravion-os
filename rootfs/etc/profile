@@ -1,0 +1,6 @@
+export PATH=/usr/local/bin:/usr/bin:/usr/sbin
+export LANG=en_US.UTF-8
+umask 022
+case $- in
+    *i*) PS1='[\u@\h \W]\$ ' ;;
+esac

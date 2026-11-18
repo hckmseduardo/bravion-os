@@ -1,0 +1,29 @@
+LFS 13.0-systemd adaptations for Pi LFS 0.1
+
+- Native AArch64 build in a Linux container on an ARM64 Mac; target is generic
+  ARMv8-A, compatible with Raspberry Pi 4. This is not an x86 LFS build.
+- Change GCC aarch64 t-aarch64-linux lib64 mapping to lib in all GCC passes.
+- /lib is the LFS merged-/usr symlink; AArch64's loader resides at
+  /lib/ld-linux-aarch64.so.1; no x86 loader/LSB symlinks are added.
+- Replace libffi's --with-gcc-arch=native with --with-gcc-arch=armv8-a so the
+  result does not require Apple Silicon instructions absent from Pi 4.
+- Omit GRUB. Raspberry Pi boot firmware loads kernel8.img and Pi 4 device tree.
+- Build Raspberry Pi's pinned 6.12 kernel source with bcm2711_defconfig,
+  built-in USB root-storage support and optional QEMU virt smoke-boot support.
+- Replace book OpenSSL 3.6.1 with supported LTS OpenSSL 3.5.9; add OpenSSH
+  10.6p2, libnl 3.12.0, iw 6.17, wpa_supplicant 2.11, sudo 1.9.17p2 and curl
+  8.23.0. Include public CA trust data from the Debian build environment.
+- Initial bootstrap omits upstream test suites and optional documentation or
+  compatibility rebuild steps. This is explicitly not a fully tested LFS book
+  conformance build. Run targeted image and functionality checks separately.
+- Generate only C.UTF-8 and en_US.UTF-8; use UTC by default; omit interactive
+  tzselect, passwd-root and editor demonstrations from the automated build.
+- Disable Python PGO for the first version; systemd uses two Ninja jobs; most small packages use four Make jobs.
+- Replace standard LFS chapter 9/10 host configuration with image-specific
+  systemd services, DHCP, Wi-Fi console wizard, SSH key authentication,
+  fixed PARTUUID fstab and Pi firmware boot configuration.
+- Runtime image omits sources, temporary cross-tools and build logs/directories.
+  Preserve build scripts, source checksums and logs beside the image.
+
+- Replace Expect 5.45.4 tclconfig/config.guess and config.sub with the copies
+  from pinned GCC 15.2.0; its original 2003 scripts cannot identify AArch64.

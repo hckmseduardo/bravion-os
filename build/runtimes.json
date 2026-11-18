@@ -1,0 +1,58 @@
+{
+  "aarch64": {
+    "rust": [
+      {
+        "url": "https://static.rust-lang.org/dist/2026-11-12/rustc-1.100.0-aarch64-unknown-linux-gnu.tar.xz",
+        "sha256": "fcbfa5b8a0cb28f0c4edfb6dda6910ee910993db31f05258613f5cd5b851263a"
+      },
+      {
+        "url": "https://static.rust-lang.org/dist/2026-11-12/cargo-1.100.0-aarch64-unknown-linux-gnu.tar.xz",
+        "sha256": "d07ee80eb6ba3c5845c554ac88086e1ff5d63f83d99c3c09cb32504cbedd6844"
+      },
+      {
+        "url": "https://static.rust-lang.org/dist/2026-11-12/rust-std-1.100.0-aarch64-unknown-linux-gnu.tar.xz",
+        "sha256": "c73f62fbe5d837f9807ed9e0076575dd8d3475c79af2b30e3570d328e6713f8f"
+      }
+    ],
+    "node": {
+      "url": "https://nodejs.org/dist/v26.13.0/node-v26.13.0-linux-arm64.tar.xz",
+      "sha256": "406fe3fbde1c054adff8b297c16fdb5af6659db327c1ac8acd46b56ef1af9a92"
+    },
+    "just": {
+      "url": "https://github.com/casey/just/releases/download/1.59.0/just-1.59.0-aarch64-unknown-linux-musl.tar.gz",
+      "sha256": "23871b1702bfd550fb5f901778fd4290ecf2ee034a45a889fbe96d89b188086d"
+    },
+    "brave": {
+      "url": "https://github.com/brave/brave-browser/releases/download/v1.99.57/brave-browser-1.99.57-linux-arm64.zip",
+      "sha256": "1bdad41be7adc541fb82b5265ed1e8c3d4a36c964ea1ad9254f9f64305285473"
+    }
+  },
+  "x86_64": {
+    "rust": [
+      {
+        "url": "https://static.rust-lang.org/dist/2026-11-12/rustc-1.100.0-x86_64-unknown-linux-gnu.tar.xz",
+        "sha256": "f1d0b1dec81dab6f523cd098507763487b0d4bd7fd2c87582f154128719be03b"
+      },
+      {
+        "url": "https://static.rust-lang.org/dist/2026-11-12/cargo-1.100.0-x86_64-unknown-linux-gnu.tar.xz",
+        "sha256": "7e29ce07d7c6e92d1826870575ba27d57fff6cb3e754aa57d99099cb88fab35d"
+      },
+      {
+        "url": "https://static.rust-lang.org/dist/2026-11-12/rust-std-1.100.0-x86_64-unknown-linux-gnu.tar.xz",
+        "sha256": "4591b6486594ded52ecd6135db95bf9355bbd3ca7a380888b141528bbcf9a5d4"
+      }
+    ],
+    "node": {
+      "url": "https://nodejs.org/dist/v26.13.0/node-v26.13.0-linux-x64.tar.xz",
+      "sha256": "d28a96af6c38596f6d9d97c0ee531c13d238d757742387d1928de822d959e997"
+    },
+    "just": {
+      "url": "https://github.com/casey/just/releases/download/1.59.0/just-1.59.0-x86_64-unknown-linux-musl.tar.gz",
+      "sha256": "409044617b6f06517c1035e55ca38c8c856ff8b650e41bc2aa1ef82d5903a23e"
+    },
+    "brave": {
+      "url": "https://github.com/brave/brave-browser/releases/download/v1.99.57/brave-browser-1.99.57-linux-amd64.zip",
+      "sha256": "734bd9e1d24bc0a94c03b0a43845107dd8a29f572c652023cf7177f5fc3a5f38"
+    }
+  }
+}

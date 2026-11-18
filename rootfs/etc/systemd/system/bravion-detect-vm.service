@@ -1,0 +1,9 @@
+[Unit]
+Description=Detect virtual machine rendering environment
+After=local-fs.target
+Before=cosmic-greeter.service
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/bravion/detect-vm
+[Install]
+WantedBy=multi-user.target
