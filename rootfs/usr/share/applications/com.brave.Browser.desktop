@@ -2,7 +2,7 @@
 Type=Application
 Name=Brave Web Browser
 Exec=brave %U
-Icon=/opt/brave.com/brave/product_logo_128.png
+Icon=com.brave.Browser
 Terminal=false
 Categories=Network;WebBrowser;
 MimeType=text/html;x-scheme-handler/http;x-scheme-handler/https;

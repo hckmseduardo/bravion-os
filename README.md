@@ -34,8 +34,8 @@ The project began on Raspberry Pi 4 and expanded to Apple Silicon virtual machin
 | COSMIC + Wayland | Desktop, workspaces, settings, terminal, files, and editor |
 | Bravion Store, written in Rust | Visual app cards, install/retry/open actions, progress, and installation logs |
 | Git, Rust, Node.js, and npm | Developer tools available in the ARM64 desktop image |
-| Brave | Browser with a VM-specific rendering fallback |
-| Flatpak | Foundation for installing additional desktop applications |
+| Brave | Preinstalled system Flatpak, including its runtime, Wayland and a VM rendering fallback |
+| Flatpak | Flathub and the official COSMIC repository configured for COSMIC Store |
 | PipeWire + WirePlumber | Audio and microphone session management |
 | NetworkManager | Ethernet and Wi-Fi configuration |
 | OpenSSH | Remote terminal access using SSH keys |
@@ -120,7 +120,7 @@ Re-run the same build command to resume completed stages. A storage directory be
 
 Docker must support privileged Linux containers and the requested architecture. Parallels builds obtain the official ARM64 Tools ISO from the local Mac installation, or from `--tools-iso /path/to/prl-tools-lin-arm.iso`; this proprietary input is not in the repository. Flashing/importing and first-boot account setup happen after generation.
 
-See the [build guide](docs/building.md) for prerequisites, checkpoints, logs, and validation scope. Pinned inputs and automated generation do not imply bit-for-bit reproducibility.
+See the [build guide](docs/building.md) for prerequisites, checkpoints, logs, and validation scope. Pinned inputs and automated generation do not imply bit-for-bit reproducibility. Brave and its runtime are provisioned from the current signed Flathub refs at configuration time; `/usr/share/bravion/flatpak-build.txt` records the installed commits. Fresh builds can therefore contain different Flatpak versions.
 
 ## Repository map
 

@@ -14,7 +14,7 @@ FILES={
  'runtimes':['build/runtimes.json','build/python-build.json'],
  'desktop-packages':['desktop/manifest.json','desktop/generated','desktop/wpa-dbus.sh'],
  'cosmic':['desktop/cosmic-build.sh','scripts/apply-cosmic-patches.py','patches/cosmic','desktop/hydrate-wallpapers.py'],
- 'configuration':['desktop/network-audio-configure.sh','desktop/pi_desktop_setup.py','desktop/pi-wifi-country.service','desktop/cosmic-integration.sh','desktop/brave-launcher.sh','rootfs','scripts/parallels-tools.py','build/pi_setup.py','build/runtimes.json'],
+ 'configuration':['desktop/network-audio-configure.sh','desktop/pi_desktop_setup.py','desktop/pi-wifi-country.service','desktop/cosmic-integration.sh','desktop/brave-launcher.sh','desktop/flatpak-install.sh','rootfs','scripts/parallels-tools.py','build/pi_setup.py','build/runtimes.json'],
  'branding':['ai-tools','branding','licenses','LICENSE','THIRD_PARTY.md','research/LFS-MIT-license.html','desktop/strip-debug.py','desktop/normalize_target.py'],
  'package':['desktop/package-desktop.sh'],
  'compress':['scripts/artifacts.py','templates'],
@@ -44,6 +44,7 @@ def stage_fingerprints(repo,target,include_lfs_packages=True):
  # new builder helper is introduced. The controller/evaluator themselves do
  # not generate image contents; stages.py is covered by its AST below.
  classified={str(p.relative_to(repo)) for p in expanded(repo,[path for paths in FILES.values() for path in paths]+['build/scripts','experimental/amd64/scripts'])}
+ classified.update(str(p.relative_to(repo)) for p in expanded(repo,['desktop/tests']))
  classified.update(['build/stages.py','build/pipeline.py','build/fingerprints.py'])
  shared=[p for p in expanded(repo,SOURCE_DIRS) if str(p.relative_to(repo)) not in classified]
  shared+=expanded(repo,['bravion','.dockerignore'])

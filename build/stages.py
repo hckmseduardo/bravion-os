@@ -212,19 +212,10 @@ def configuration(target):
  for unit in ['bravion-detect-vm.service','pi-firstboot.service','pi-grow-root.service','pi-wifi-country.service','cosmic-greeter.service']:
   run('systemctl','--root='+str(ROOT),'enable',unit)
  if target=='parallels-arm64':run('python3',REPO/'scripts/parallels-tools.py',ROOT,'/inputs/parallels-tools.iso')
- # Brave assets are fetched per architecture and checked against publisher digests.
- rec=json.loads((REPO/'build/runtimes.json').read_text())[os.uname().machine]['brave']
- p=fetch(rec['url'],ROOT/'sources'/rec['url'].rsplit('/',1)[-1],rec['sha256']);dest=ROOT/'opt/brave.com/brave';dest.mkdir(parents=True,exist_ok=True)
- with zipfile.ZipFile(p) as z:
-  for info in z.infolist():
-   rel=PurePosixPath(info.filename)
-   if rel.is_absolute() or '..' in rel.parts:raise ValueError('Unsafe Brave archive')
-   z.extract(info,dest)
-   if (dest/info.filename).is_file():(dest/info.filename).chmod((info.external_attr>>16)&0o777 or 0o644)
- for name in ['brave','chrome_crashpad_handler','chrome-sandbox']:
-  if (dest/name).exists():(dest/name).chmod(0o755)
+ # Install signed Flatpak app/runtime payloads before packaging the image.
+ p=ROOT/'desktop-scripts/flatpak-install.sh';shutil.copy2(REPO/'desktop/flatpak-install.sh',p)
+ guest(ROOT,'bash','/desktop-scripts/flatpak-install.sh')
  shutil.copy2(REPO/'desktop/brave-launcher.sh',ROOT/'usr/bin/brave');(ROOT/'usr/bin/brave').chmod(0o755)
- # Desktop entry comes from Bravion's clean overlay, never a user profile.
  guest(ROOT,'ldconfig')
 def branding(target):
  src=ROOT/'sources/bravion-store';shutil.copytree(REPO/'ai-tools',src,dirs_exist_ok=True)

@@ -3,4 +3,4 @@
 if [ -f /etc/pi-lfs-vm ]; then
     set -- --disable-gpu "$@"
 fi
-exec /opt/brave.com/brave/brave --ozone-platform=wayland "$@"
+exec /usr/bin/flatpak run --system com.brave.Browser --ozone-platform=wayland "$@"

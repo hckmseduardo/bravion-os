@@ -4,7 +4,7 @@ The automatic pipeline is under clean-build validation. This document separates 
 
 ## Checks executed on 2026-11-18
 
-- Repository checks: 42 Python tests, two Brave launcher tests, source/recipe syntax and manifest checks passed.
+- Repository checks: 44 Python tests, two Brave launcher tests, source/recipe syntax and manifest checks passed.
 - Rust Store: 16 tests passed inside the native ARM64 LFS environment.
 - COSMIC pointer helper: five Rust regression tests passed.
 - Builder Dockerfile: built successfully for ARM64.
@@ -46,3 +46,8 @@ The packaging test reused a prepared root. It does **not** prove the new source 
 - Fresh-account graphical and physical hardware tests of newly generated images.
 
 A build only reports `IMAGE_COMPLETE` after every stage, compression, checksum verification, and boot probe succeeds. Per-target artifact reports explicitly record graphical and physical tests as false until independently performed.
+
+14. The desktop and base source caches can share archive inodes. The WPA D-Bus recipe now skips its redundant copy when source and destination are the same file. A regression reproduces the failure using hard links; the corrected recipe passed and the clean Pi build advanced to COSMIC compilation. Existing build-state input migration was limited to this verified failure boundary and recorded outside the public repository.
+15. The next image configuration installs `com.brave.Browser` as a system Flatpak, with its Freedesktop runtime and related extensions, and bundles the signed official Flathub and COSMIC remote descriptors. In the native ARM64 LFS test root the installation completed and the browser executable and runtime were verified. A build receipt records installed refs and commits. Graphical browser launch in the new images is still pending. Per-user remote initialization supports COSMIC applet discovery; the system installation supplies Brave to every account.
+
+16. Launcher regression tests were unintentionally treated as shared image inputs. The evaluator now excludes `desktop/tests` from payload fingerprints; a regression proves that changing a test does not invalidate compiled foundations. Existing build-state normalization was verified against the original immutable source and evaluator, with no recipe changes, before resuming. Unknown non-test build inputs still invalidate all affected stages.

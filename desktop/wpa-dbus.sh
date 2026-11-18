@@ -2,7 +2,10 @@
 set -euo pipefail
 umask 022
 r=/build/desktop-lfs
-cp /build/lfs/sources/wpa_supplicant-2.11.tar.gz "$r/sources/"
+archive=/build/lfs/sources/wpa_supplicant-2.11.tar.gz
+if [ ! "$archive" -ef "$r/sources/${archive##*/}" ]; then
+    cp "$archive" "$r/sources/"
+fi
 mkdir -p "$r/sources/desktop-wpa"
 tar -xf "$r/sources/wpa_supplicant-2.11.tar.gz" -C "$r/sources/desktop-wpa"
 cat > "$r/sources/desktop-wpa/wpa_supplicant-2.11/wpa_supplicant/.config" <<'EOF'

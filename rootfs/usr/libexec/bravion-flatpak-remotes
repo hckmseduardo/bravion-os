@@ -1,0 +1,6 @@
+#!/bin/sh
+# COSMIC applets use user-scoped sources; signed descriptors are bundled offline.
+set -eu
+for remote in flathub cosmic; do
+    /usr/bin/flatpak remote-add --user --if-not-exists "$remote" "/usr/share/bravion/flatpak/$remote.flatpakrepo"
+done

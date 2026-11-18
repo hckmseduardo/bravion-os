@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Bravion software sources
+Exec=/usr/libexec/bravion-flatpak-remotes
+TryExec=/usr/bin/flatpak
+Terminal=false
+NoDisplay=true
+OnlyShowIn=COSMIC;
+X-GNOME-Autostart-enabled=true

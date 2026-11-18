@@ -47,6 +47,7 @@ cat > /etc/security/cosmic-env.conf <<'PAMENV'
 XDG_SESSION_TYPE DEFAULT=wayland OVERRIDE=wayland
 XDG_CURRENT_DESKTOP DEFAULT=COSMIC OVERRIDE=COSMIC
 XDG_SESSION_DESKTOP DEFAULT=COSMIC OVERRIDE=COSMIC
+XDG_DATA_DIRS DEFAULT=/usr/local/share:/usr/share:/var/lib/flatpak/exports/share:@{HOME}/.local/share/flatpak/exports/share
 PAMENV
 # Optional keyring module; no credentials or account/password are baked into the image.
 if [[ -f /usr/lib/security/pam_gnome_keyring.so || -f /usr/lib64/security/pam_gnome_keyring.so ]]; then
@@ -101,9 +102,7 @@ done
 for service in pipewire.socket pipewire-pulse.socket wireplumber.service; do
     if [[ -f /usr/lib/systemd/user/$service || -f /etc/systemd/user/$service ]]; then systemctl --global enable "$service"; fi
 done
-# Flatpak repo setup can be performed on-device once networking is available:
-# flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-# No automatic network request or credential storage here.
+# Signed Flatpak remotes and the preinstalled browser are provisioned by the next build step.
 # This edition contains only native Wayland applications; explicitly suppress Xwayland.
 sed -i 's@/usr/bin/cosmic-session$@/usr/bin/cosmic-session cosmic-comp --no-xwayland@' /usr/bin/start-cosmic
 grep -q 'cosmic-session cosmic-comp --no-xwayland' /usr/bin/start-cosmic

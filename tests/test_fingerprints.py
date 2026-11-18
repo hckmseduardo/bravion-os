@@ -58,3 +58,9 @@ class FingerprintTests(unittest.TestCase):
    new=m.stage_fingerprints(p,'pi4-arm64');self.assertEqual(old['desktop-packages'],new['desktop-packages'])
    data['packages'][0]['sha256']='0'*64;f.write_text(json.dumps(data))
    self.assertNotEqual(old['desktop-packages'],m.stage_fingerprints(p,'pi4-arm64')['desktop-packages'])
+ def test_launcher_tests_do_not_change_image_payload_fingerprints(self):
+  with tempfile.TemporaryDirectory() as d:
+   p=pathlib.Path(d)/'repo';shutil.copytree(R,p,ignore=shutil.ignore_patterns('.git','target','__pycache__','logs'))
+   old=m.stage_fingerprints(p,'pi4-arm64')
+   f=p/'desktop/tests/test_brave_launcher.py';f.write_text(f.read_text()+'\n# test-only change\n')
+   self.assertEqual(old,m.stage_fingerprints(p,'pi4-arm64'))
